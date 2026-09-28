@@ -1,0 +1,21 @@
+{
+  "name": "savitha-canteen-ai",
+  "version": "1.0.0",
+  "description": "Savitha Canteen - Campus Food Ordering & AI Kitchen Demand Prediction",
+  "scripts": {
+    "build": "echo 'Static site ready for Vercel'",
+    "start": "python run.py",
+    "dev": "python run.py",
+    "server": "python backend/app.py",
+    "serve-static": "npx serve ."
+  },
+  "keywords": [
+    "canteen",
+    "ai",
+    "food-ordering",
+    "demand-prediction",
+    "machine-learning"
+  ],
+  "author": "Savitha Canteen",
+  "license": "MIT"
+}
