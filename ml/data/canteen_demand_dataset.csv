@@ -1,0 +1,721 @@
+date,day_of_week,weather,is_holiday,special_event,food_item,previous_day_sales,previous_week_sales,quantity_sold
+2026-06-23,Tuesday,Cold,0,College Fest,Veg Biryani,140,140,186
+2026-06-23,Tuesday,Cold,0,College Fest,Chicken Biryani,175,175,239
+2026-06-23,Tuesday,Cold,0,College Fest,Masala Dosa,125,125,149
+2026-06-23,Tuesday,Cold,0,College Fest,Paneer Thali,110,110,134
+2026-06-23,Tuesday,Cold,0,College Fest,Chole Bhature,130,130,158
+2026-06-23,Tuesday,Cold,0,College Fest,Samosa & Chai,220,220,309
+2026-06-23,Tuesday,Cold,0,College Fest,Fried Rice,115,115,152
+2026-06-23,Tuesday,Cold,0,College Fest,Sandwich,95,95,110
+2026-06-24,Wednesday,Sunny,0,None,Veg Biryani,186,186,141
+2026-06-24,Wednesday,Sunny,0,None,Chicken Biryani,239,239,192
+2026-06-24,Wednesday,Sunny,0,None,Masala Dosa,149,149,127
+2026-06-24,Wednesday,Sunny,0,None,Paneer Thali,134,134,111
+2026-06-24,Wednesday,Sunny,0,None,Chole Bhature,158,158,139
+2026-06-24,Wednesday,Sunny,0,None,Samosa & Chai,309,309,197
+2026-06-24,Wednesday,Sunny,0,None,Fried Rice,152,152,104
+2026-06-24,Wednesday,Sunny,0,None,Sandwich,110,110,95
+2026-06-25,Thursday,Cold,0,None,Veg Biryani,141,164,124
+2026-06-25,Thursday,Cold,0,None,Chicken Biryani,192,216,174
+2026-06-25,Thursday,Cold,0,None,Masala Dosa,127,138,112
+2026-06-25,Thursday,Cold,0,None,Paneer Thali,111,122,94
+2026-06-25,Thursday,Cold,0,None,Chole Bhature,139,148,142
+2026-06-25,Thursday,Cold,0,None,Samosa & Chai,197,253,209
+2026-06-25,Thursday,Cold,0,None,Fried Rice,104,128,112
+2026-06-25,Thursday,Cold,0,None,Sandwich,95,102,81
+2026-06-26,Friday,Cloudy,0,None,Veg Biryani,124,150,161
+2026-06-26,Friday,Cloudy,0,None,Chicken Biryani,174,202,212
+2026-06-26,Friday,Cloudy,0,None,Masala Dosa,112,129,138
+2026-06-26,Friday,Cloudy,0,None,Paneer Thali,94,113,135
+2026-06-26,Friday,Cloudy,0,None,Chole Bhature,142,146,149
+2026-06-26,Friday,Cloudy,0,None,Samosa & Chai,209,238,259
+2026-06-26,Friday,Cloudy,0,None,Fried Rice,112,123,132
+2026-06-26,Friday,Cloudy,0,None,Sandwich,81,95,129
+2026-06-27,Saturday,Sunny,1,Sports Meet,Veg Biryani,161,153,97
+2026-06-27,Saturday,Sunny,1,Sports Meet,Chicken Biryani,212,204,114
+2026-06-27,Saturday,Sunny,1,Sports Meet,Masala Dosa,138,132,114
+2026-06-27,Saturday,Sunny,1,Sports Meet,Paneer Thali,135,118,47
+2026-06-27,Saturday,Sunny,1,Sports Meet,Chole Bhature,149,147,127
+2026-06-27,Saturday,Sunny,1,Sports Meet,Samosa & Chai,259,244,105
+2026-06-27,Saturday,Sunny,1,Sports Meet,Fried Rice,132,125,66
+2026-06-27,Saturday,Sunny,1,Sports Meet,Sandwich,129,104,77
+2026-06-28,Sunday,Cloudy,1,None,Veg Biryani,97,142,77
+2026-06-28,Sunday,Cloudy,1,None,Chicken Biryani,114,186,94
+2026-06-28,Sunday,Cloudy,1,None,Masala Dosa,114,128,74
+2026-06-28,Sunday,Cloudy,1,None,Paneer Thali,47,104,39
+2026-06-28,Sunday,Cloudy,1,None,Chole Bhature,127,143,71
+2026-06-28,Sunday,Cloudy,1,None,Samosa & Chai,105,216,86
+2026-06-28,Sunday,Cloudy,1,None,Fried Rice,66,113,51
+2026-06-28,Sunday,Cloudy,1,None,Sandwich,77,98,62
+2026-06-29,Monday,Cloudy,0,Exam Period,Veg Biryani,77,131,121
+2026-06-29,Monday,Cloudy,0,Exam Period,Chicken Biryani,94,171,120
+2026-06-29,Monday,Cloudy,0,Exam Period,Masala Dosa,74,119,108
+2026-06-29,Monday,Cloudy,0,Exam Period,Paneer Thali,39,93,88
+2026-06-29,Monday,Cloudy,0,Exam Period,Chole Bhature,71,131,101
+2026-06-29,Monday,Cloudy,0,Exam Period,Samosa & Chai,86,194,251
+2026-06-29,Monday,Cloudy,0,Exam Period,Fried Rice,51,103,106
+2026-06-29,Monday,Cloudy,0,Exam Period,Sandwich,62,92,111
+2026-06-30,Tuesday,Sunny,0,College Fest,Veg Biryani,121,130,179
+2026-06-30,Tuesday,Sunny,0,College Fest,Chicken Biryani,120,164,249
+2026-06-30,Tuesday,Sunny,0,College Fest,Masala Dosa,108,117,153
+2026-06-30,Tuesday,Sunny,0,College Fest,Paneer Thali,88,93,135
+2026-06-30,Tuesday,Sunny,0,College Fest,Chole Bhature,101,127,164
+2026-06-30,Tuesday,Sunny,0,College Fest,Samosa & Chai,251,202,327
+2026-06-30,Tuesday,Sunny,0,College Fest,Fried Rice,106,103,133
+2026-06-30,Tuesday,Sunny,0,College Fest,Sandwich,111,95,100
+2026-07-01,Wednesday,Sunny,0,None,Veg Biryani,179,129,157
+2026-07-01,Wednesday,Sunny,0,None,Chicken Biryani,249,165,204
+2026-07-01,Wednesday,Sunny,0,None,Masala Dosa,153,118,131
+2026-07-01,Wednesday,Sunny,0,None,Paneer Thali,135,93,125
+2026-07-01,Wednesday,Sunny,0,None,Chole Bhature,164,128,140
+2026-07-01,Wednesday,Sunny,0,None,Samosa & Chai,327,205,219
+2026-07-01,Wednesday,Sunny,0,None,Fried Rice,133,101,124
+2026-07-01,Wednesday,Sunny,0,None,Sandwich,100,94,112
+2026-07-02,Thursday,Cold,0,College Fest,Veg Biryani,157,131,183
+2026-07-02,Thursday,Cold,0,College Fest,Chicken Biryani,204,167,269
+2026-07-02,Thursday,Cold,0,College Fest,Masala Dosa,131,119,119
+2026-07-02,Thursday,Cold,0,College Fest,Paneer Thali,125,95,130
+2026-07-02,Thursday,Cold,0,College Fest,Chole Bhature,140,128,165
+2026-07-02,Thursday,Cold,0,College Fest,Samosa & Chai,219,208,314
+2026-07-02,Thursday,Cold,0,College Fest,Fried Rice,124,103,140
+2026-07-02,Thursday,Cold,0,College Fest,Sandwich,112,96,90
+2026-07-03,Friday,Sunny,0,Sports Meet,Veg Biryani,183,139,207
+2026-07-03,Friday,Sunny,0,Sports Meet,Chicken Biryani,269,180,268
+2026-07-03,Friday,Sunny,0,Sports Meet,Masala Dosa,119,120,202
+2026-07-03,Friday,Sunny,0,Sports Meet,Paneer Thali,130,100,160
+2026-07-03,Friday,Sunny,0,Sports Meet,Chole Bhature,165,131,186
+2026-07-03,Friday,Sunny,0,Sports Meet,Samosa & Chai,314,223,321
+2026-07-03,Friday,Sunny,0,Sports Meet,Fried Rice,140,107,182
+2026-07-03,Friday,Sunny,0,Sports Meet,Sandwich,90,97,145
+2026-07-04,Saturday,Sunny,1,Sports Meet,Veg Biryani,207,146,90
+2026-07-04,Saturday,Sunny,1,Sports Meet,Chicken Biryani,268,188,138
+2026-07-04,Saturday,Sunny,1,Sports Meet,Masala Dosa,202,129,107
+2026-07-04,Saturday,Sunny,1,Sports Meet,Paneer Thali,160,103,67
+2026-07-04,Saturday,Sunny,1,Sports Meet,Chole Bhature,186,136,117
+2026-07-04,Saturday,Sunny,1,Sports Meet,Samosa & Chai,321,232,134
+2026-07-04,Saturday,Sunny,1,Sports Meet,Fried Rice,182,115,76
+2026-07-04,Saturday,Sunny,1,Sports Meet,Sandwich,145,100,64
+2026-07-05,Sunday,Sunny,1,None,Veg Biryani,90,145,72
+2026-07-05,Sunday,Sunny,1,None,Chicken Biryani,138,192,96
+2026-07-05,Sunday,Sunny,1,None,Masala Dosa,107,128,75
+2026-07-05,Sunday,Sunny,1,None,Paneer Thali,67,106,39
+2026-07-05,Sunday,Sunny,1,None,Chole Bhature,117,135,72
+2026-07-05,Sunday,Sunny,1,None,Samosa & Chai,134,236,91
+2026-07-05,Sunday,Sunny,1,None,Fried Rice,76,116,53
+2026-07-05,Sunday,Sunny,1,None,Sandwich,64,98,47
+2026-07-06,Monday,Sunny,0,None,Veg Biryani,72,144,131
+2026-07-06,Monday,Sunny,0,None,Chicken Biryani,96,192,172
+2026-07-06,Monday,Sunny,0,None,Masala Dosa,75,128,138
+2026-07-06,Monday,Sunny,0,None,Paneer Thali,39,106,106
+2026-07-06,Monday,Sunny,0,None,Chole Bhature,72,135,126
+2026-07-06,Monday,Sunny,0,None,Samosa & Chai,91,237,208
+2026-07-06,Monday,Sunny,0,None,Fried Rice,53,116,90
+2026-07-06,Monday,Sunny,0,None,Sandwich,47,96,90
+2026-07-07,Tuesday,Cold,0,None,Veg Biryani,131,146,134
+2026-07-07,Tuesday,Cold,0,None,Chicken Biryani,172,199,203
+2026-07-07,Tuesday,Cold,0,None,Masala Dosa,138,132,117
+2026-07-07,Tuesday,Cold,0,None,Paneer Thali,106,109,107
+2026-07-07,Tuesday,Cold,0,None,Chole Bhature,126,139,123
+2026-07-07,Tuesday,Cold,0,None,Samosa & Chai,208,231,188
+2026-07-07,Tuesday,Cold,0,None,Fried Rice,90,114,121
+2026-07-07,Tuesday,Cold,0,None,Sandwich,90,93,96
+2026-07-08,Wednesday,Rainy,1,None,Veg Biryani,134,139,119
+2026-07-08,Wednesday,Rainy,1,None,Chicken Biryani,203,193,130
+2026-07-08,Wednesday,Rainy,1,None,Masala Dosa,117,127,103
+2026-07-08,Wednesday,Rainy,1,None,Paneer Thali,107,105,45
+2026-07-08,Wednesday,Rainy,1,None,Chole Bhature,123,133,135
+2026-07-08,Wednesday,Rainy,1,None,Samosa & Chai,188,211,227
+2026-07-08,Wednesday,Rainy,1,None,Fried Rice,121,112,70
+2026-07-08,Wednesday,Rainy,1,None,Sandwich,96,92,63
+2026-07-09,Thursday,Sunny,0,Sports Meet,Veg Biryani,119,134,180
+2026-07-09,Thursday,Sunny,0,Sports Meet,Chicken Biryani,130,182,216
+2026-07-09,Thursday,Sunny,0,Sports Meet,Masala Dosa,103,123,144
+2026-07-09,Thursday,Sunny,0,Sports Meet,Paneer Thali,45,93,141
+2026-07-09,Thursday,Sunny,0,Sports Meet,Chole Bhature,135,132,154
+2026-07-09,Thursday,Sunny,0,Sports Meet,Samosa & Chai,227,212,289
+2026-07-09,Thursday,Sunny,0,Sports Meet,Fried Rice,70,105,137
+2026-07-09,Thursday,Sunny,0,Sports Meet,Sandwich,63,85,134
+2026-07-10,Friday,Cloudy,0,None,Veg Biryani,180,133,159
+2026-07-10,Friday,Cloudy,0,None,Chicken Biryani,216,175,205
+2026-07-10,Friday,Cloudy,0,None,Masala Dosa,144,127,158
+2026-07-10,Friday,Cloudy,0,None,Paneer Thali,141,95,121
+2026-07-10,Friday,Cloudy,0,None,Chole Bhature,154,130,159
+2026-07-10,Friday,Cloudy,0,None,Samosa & Chai,289,208,288
+2026-07-10,Friday,Cloudy,0,None,Fried Rice,137,104,122
+2026-07-10,Friday,Cloudy,0,None,Sandwich,134,91,115
+2026-07-11,Saturday,Sunny,1,None,Veg Biryani,159,126,80
+2026-07-11,Saturday,Sunny,1,None,Chicken Biryani,205,166,116
+2026-07-11,Saturday,Sunny,1,None,Masala Dosa,158,120,73
+2026-07-11,Saturday,Sunny,1,None,Paneer Thali,121,89,35
+2026-07-11,Saturday,Sunny,1,None,Chole Bhature,159,127,105
+2026-07-11,Saturday,Sunny,1,None,Samosa & Chai,288,204,118
+2026-07-11,Saturday,Sunny,1,None,Fried Rice,122,96,66
+2026-07-11,Saturday,Sunny,1,None,Sandwich,115,87,63
+2026-07-12,Sunday,Sunny,1,None,Veg Biryani,80,125,60
+2026-07-12,Sunday,Sunny,1,None,Chicken Biryani,116,163,95
+2026-07-12,Sunday,Sunny,1,None,Masala Dosa,73,115,78
+2026-07-12,Sunday,Sunny,1,None,Paneer Thali,35,85,35
+2026-07-12,Sunday,Sunny,1,None,Chole Bhature,105,125,108
+2026-07-12,Sunday,Sunny,1,None,Samosa & Chai,118,201,108
+2026-07-12,Sunday,Sunny,1,None,Fried Rice,66,94,44
+2026-07-12,Sunday,Sunny,1,None,Sandwich,63,87,59
+2026-07-13,Monday,Sunny,0,Exam Period,Veg Biryani,60,123,105
+2026-07-13,Monday,Sunny,0,Exam Period,Chicken Biryani,95,162,158
+2026-07-13,Monday,Sunny,0,Exam Period,Masala Dosa,78,116,116
+2026-07-13,Monday,Sunny,0,Exam Period,Paneer Thali,35,84,85
+2026-07-13,Monday,Sunny,0,Exam Period,Chole Bhature,108,130,119
+2026-07-13,Monday,Sunny,0,Exam Period,Samosa & Chai,108,204,248
+2026-07-13,Monday,Sunny,0,Exam Period,Fried Rice,44,93,104
+2026-07-13,Monday,Sunny,0,Exam Period,Sandwich,59,89,119
+2026-07-14,Tuesday,Sunny,0,Sports Meet,Veg Biryani,105,120,172
+2026-07-14,Tuesday,Sunny,0,Sports Meet,Chicken Biryani,158,160,207
+2026-07-14,Tuesday,Sunny,0,Sports Meet,Masala Dosa,116,113,147
+2026-07-14,Tuesday,Sunny,0,Sports Meet,Paneer Thali,85,81,130
+2026-07-14,Tuesday,Sunny,0,Sports Meet,Chole Bhature,119,129,162
+2026-07-14,Tuesday,Sunny,0,Sports Meet,Samosa & Chai,248,209,281
+2026-07-14,Tuesday,Sunny,0,Sports Meet,Fried Rice,104,95,147
+2026-07-14,Tuesday,Sunny,0,Sports Meet,Sandwich,119,93,125
+2026-07-15,Wednesday,Sunny,0,None,Veg Biryani,172,125,147
+2026-07-15,Wednesday,Sunny,0,None,Chicken Biryani,207,161,206
+2026-07-15,Wednesday,Sunny,0,None,Masala Dosa,147,117,129
+2026-07-15,Wednesday,Sunny,0,None,Paneer Thali,130,85,140
+2026-07-15,Wednesday,Sunny,0,None,Chole Bhature,162,135,143
+2026-07-15,Wednesday,Sunny,0,None,Samosa & Chai,281,223,216
+2026-07-15,Wednesday,Sunny,0,None,Fried Rice,147,99,110
+2026-07-15,Wednesday,Sunny,0,None,Sandwich,125,97,104
+2026-07-16,Thursday,Cold,0,None,Veg Biryani,147,129,133
+2026-07-16,Thursday,Cold,0,None,Chicken Biryani,206,172,180
+2026-07-16,Thursday,Cold,0,None,Masala Dosa,129,121,126
+2026-07-16,Thursday,Cold,0,None,Paneer Thali,140,98,106
+2026-07-16,Thursday,Cold,0,None,Chole Bhature,143,136,117
+2026-07-16,Thursday,Cold,0,None,Samosa & Chai,216,221,186
+2026-07-16,Thursday,Cold,0,None,Fried Rice,110,104,107
+2026-07-16,Thursday,Cold,0,None,Sandwich,104,103,99
+2026-07-17,Friday,Cloudy,0,None,Veg Biryani,133,122,171
+2026-07-17,Friday,Cloudy,0,None,Chicken Biryani,180,167,191
+2026-07-17,Friday,Cloudy,0,None,Masala Dosa,126,118,152
+2026-07-17,Friday,Cloudy,0,None,Paneer Thali,106,93,135
+2026-07-17,Friday,Cloudy,0,None,Chole Bhature,117,130,146
+2026-07-17,Friday,Cloudy,0,None,Samosa & Chai,186,206,267
+2026-07-17,Friday,Cloudy,0,None,Fried Rice,107,100,139
+2026-07-17,Friday,Cloudy,0,None,Sandwich,99,98,105
+2026-07-18,Saturday,Sunny,1,None,Veg Biryani,171,124,82
+2026-07-18,Saturday,Sunny,1,None,Chicken Biryani,191,165,113
+2026-07-18,Saturday,Sunny,1,None,Masala Dosa,152,117,96
+2026-07-18,Saturday,Sunny,1,None,Paneer Thali,135,95,56
+2026-07-18,Saturday,Sunny,1,None,Chole Bhature,146,129,84
+2026-07-18,Saturday,Sunny,1,None,Samosa & Chai,267,203,95
+2026-07-18,Saturday,Sunny,1,None,Fried Rice,139,102,69
+2026-07-18,Saturday,Sunny,1,None,Sandwich,105,96,65
+2026-07-19,Sunday,Sunny,1,None,Veg Biryani,82,124,74
+2026-07-19,Sunday,Sunny,1,None,Chicken Biryani,113,164,150
+2026-07-19,Sunday,Sunny,1,None,Masala Dosa,96,121,81
+2026-07-19,Sunday,Sunny,1,None,Paneer Thali,56,98,51
+2026-07-19,Sunday,Sunny,1,None,Chole Bhature,84,126,98
+2026-07-19,Sunday,Sunny,1,None,Samosa & Chai,95,200,111
+2026-07-19,Sunday,Sunny,1,None,Fried Rice,69,103,53
+2026-07-19,Sunday,Sunny,1,None,Sandwich,65,97,60
+2026-07-20,Monday,Cold,0,None,Veg Biryani,74,126,117
+2026-07-20,Monday,Cold,0,None,Chicken Biryani,150,172,154
+2026-07-20,Monday,Cold,0,None,Masala Dosa,81,121,108
+2026-07-20,Monday,Cold,0,None,Paneer Thali,51,100,100
+2026-07-20,Monday,Cold,0,None,Chole Bhature,98,124,143
+2026-07-20,Monday,Cold,0,None,Samosa & Chai,111,201,165
+2026-07-20,Monday,Cold,0,None,Fried Rice,53,104,111
+2026-07-20,Monday,Cold,0,None,Sandwich,60,97,73
+2026-07-21,Tuesday,Cold,0,None,Veg Biryani,117,128,127
+2026-07-21,Tuesday,Cold,0,None,Chicken Biryani,154,172,183
+2026-07-21,Tuesday,Cold,0,None,Masala Dosa,108,120,119
+2026-07-21,Tuesday,Cold,0,None,Paneer Thali,100,103,95
+2026-07-21,Tuesday,Cold,0,None,Chole Bhature,143,128,116
+2026-07-21,Tuesday,Cold,0,None,Samosa & Chai,165,189,221
+2026-07-21,Tuesday,Cold,0,None,Fried Rice,111,105,102
+2026-07-21,Tuesday,Cold,0,None,Sandwich,73,90,92
+2026-07-22,Wednesday,Sunny,0,Sports Meet,Veg Biryani,127,122,184
+2026-07-22,Wednesday,Sunny,0,Sports Meet,Chicken Biryani,183,168,220
+2026-07-22,Wednesday,Sunny,0,Sports Meet,Masala Dosa,119,116,186
+2026-07-22,Wednesday,Sunny,0,Sports Meet,Paneer Thali,95,98,150
+2026-07-22,Wednesday,Sunny,0,Sports Meet,Chole Bhature,116,121,148
+2026-07-22,Wednesday,Sunny,0,Sports Meet,Samosa & Chai,221,180,292
+2026-07-22,Wednesday,Sunny,0,Sports Meet,Fried Rice,102,99,144
+2026-07-22,Wednesday,Sunny,0,Sports Meet,Sandwich,92,85,132
+2026-07-23,Thursday,Rainy,0,None,Veg Biryani,184,127,155
+2026-07-23,Thursday,Rainy,0,None,Chicken Biryani,220,170,198
+2026-07-23,Thursday,Rainy,0,None,Masala Dosa,186,124,113
+2026-07-23,Thursday,Rainy,0,None,Paneer Thali,150,99,120
+2026-07-23,Thursday,Rainy,0,None,Chole Bhature,148,122,126
+2026-07-23,Thursday,Rainy,0,None,Samosa & Chai,292,191,297
+2026-07-23,Thursday,Rainy,0,None,Fried Rice,144,104,115
+2026-07-23,Thursday,Rainy,0,None,Sandwich,132,89,82
+2026-07-24,Friday,Cloudy,0,Sports Meet,Veg Biryani,155,130,231
+2026-07-24,Friday,Cloudy,0,Sports Meet,Chicken Biryani,198,173,269
+2026-07-24,Friday,Cloudy,0,Sports Meet,Masala Dosa,113,122,175
+2026-07-24,Friday,Cloudy,0,Sports Meet,Paneer Thali,120,101,173
+2026-07-24,Friday,Cloudy,0,Sports Meet,Chole Bhature,126,123,218
+2026-07-24,Friday,Cloudy,0,Sports Meet,Samosa & Chai,297,207,349
+2026-07-24,Friday,Cloudy,0,Sports Meet,Fried Rice,115,105,157
+2026-07-24,Friday,Cloudy,0,Sports Meet,Sandwich,82,87,139
+2026-07-25,Saturday,Sunny,1,None,Veg Biryani,231,139,93
+2026-07-25,Saturday,Sunny,1,None,Chicken Biryani,269,184,94
+2026-07-25,Saturday,Sunny,1,None,Masala Dosa,175,125,89
+2026-07-25,Saturday,Sunny,1,None,Paneer Thali,173,106,54
+2026-07-25,Saturday,Sunny,1,None,Chole Bhature,218,133,89
+2026-07-25,Saturday,Sunny,1,None,Samosa & Chai,349,219,111
+2026-07-25,Saturday,Sunny,1,None,Fried Rice,157,107,31
+2026-07-25,Saturday,Sunny,1,None,Sandwich,139,92,52
+2026-07-26,Sunday,Rainy,1,None,Veg Biryani,93,140,75
+2026-07-26,Sunday,Rainy,1,None,Chicken Biryani,94,181,84
+2026-07-26,Sunday,Rainy,1,None,Masala Dosa,89,124,80
+2026-07-26,Sunday,Rainy,1,None,Paneer Thali,54,106,28
+2026-07-26,Sunday,Rainy,1,None,Chole Bhature,89,134,87
+2026-07-26,Sunday,Rainy,1,None,Samosa & Chai,111,221,136
+2026-07-26,Sunday,Rainy,1,None,Fried Rice,31,102,72
+2026-07-26,Sunday,Rainy,1,None,Sandwich,52,90,37
+2026-07-27,Monday,Cold,0,College Fest,Veg Biryani,75,140,185
+2026-07-27,Monday,Cold,0,College Fest,Chicken Biryani,84,172,229
+2026-07-27,Monday,Cold,0,College Fest,Masala Dosa,80,124,126
+2026-07-27,Monday,Cold,0,College Fest,Paneer Thali,28,103,118
+2026-07-27,Monday,Cold,0,College Fest,Chole Bhature,87,132,155
+2026-07-27,Monday,Cold,0,College Fest,Samosa & Chai,136,224,287
+2026-07-27,Monday,Cold,0,College Fest,Fried Rice,72,105,130
+2026-07-27,Monday,Cold,0,College Fest,Sandwich,37,87,96
+2026-07-28,Tuesday,Sunny,0,College Fest,Veg Biryani,185,150,190
+2026-07-28,Tuesday,Sunny,0,College Fest,Chicken Biryani,229,182,264
+2026-07-28,Tuesday,Sunny,0,College Fest,Masala Dosa,126,127,166
+2026-07-28,Tuesday,Sunny,0,College Fest,Paneer Thali,118,105,115
+2026-07-28,Tuesday,Sunny,0,College Fest,Chole Bhature,155,134,192
+2026-07-28,Tuesday,Sunny,0,College Fest,Samosa & Chai,287,242,295
+2026-07-28,Tuesday,Sunny,0,College Fest,Fried Rice,130,107,142
+2026-07-28,Tuesday,Sunny,0,College Fest,Sandwich,96,90,114
+2026-07-29,Wednesday,Cold,0,Exam Period,Veg Biryani,190,159,126
+2026-07-29,Wednesday,Cold,0,Exam Period,Chicken Biryani,264,194,144
+2026-07-29,Wednesday,Cold,0,Exam Period,Masala Dosa,166,134,108
+2026-07-29,Wednesday,Cold,0,Exam Period,Paneer Thali,115,108,92
+2026-07-29,Wednesday,Cold,0,Exam Period,Chole Bhature,192,145,108
+2026-07-29,Wednesday,Cold,0,Exam Period,Samosa & Chai,295,252,268
+2026-07-29,Wednesday,Cold,0,Exam Period,Fried Rice,142,113,105
+2026-07-29,Wednesday,Cold,0,Exam Period,Sandwich,114,93,103
+2026-07-30,Thursday,Sunny,0,None,Veg Biryani,126,151,154
+2026-07-30,Thursday,Sunny,0,None,Chicken Biryani,144,183,183
+2026-07-30,Thursday,Sunny,0,None,Masala Dosa,108,122,136
+2026-07-30,Thursday,Sunny,0,None,Paneer Thali,92,100,118
+2026-07-30,Thursday,Sunny,0,None,Chole Bhature,108,139,123
+2026-07-30,Thursday,Sunny,0,None,Samosa & Chai,268,249,214
+2026-07-30,Thursday,Sunny,0,None,Fried Rice,105,107,125
+2026-07-30,Thursday,Sunny,0,None,Sandwich,103,89,102
+2026-07-31,Friday,Cloudy,0,None,Veg Biryani,154,151,168
+2026-07-31,Friday,Cloudy,0,None,Chicken Biryani,183,181,212
+2026-07-31,Friday,Cloudy,0,None,Masala Dosa,136,126,163
+2026-07-31,Friday,Cloudy,0,None,Paneer Thali,118,100,127
+2026-07-31,Friday,Cloudy,0,None,Chole Bhature,123,139,162
+2026-07-31,Friday,Cloudy,0,None,Samosa & Chai,214,237,260
+2026-07-31,Friday,Cloudy,0,None,Fried Rice,125,109,136
+2026-07-31,Friday,Cloudy,0,None,Sandwich,102,92,123
+2026-08-01,Saturday,Sunny,1,Sports Meet,Veg Biryani,168,142,107
+2026-08-01,Saturday,Sunny,1,Sports Meet,Chicken Biryani,212,173,142
+2026-08-01,Saturday,Sunny,1,Sports Meet,Masala Dosa,163,124,119
+2026-08-01,Saturday,Sunny,1,Sports Meet,Paneer Thali,127,93,59
+2026-08-01,Saturday,Sunny,1,Sports Meet,Chole Bhature,162,131,132
+2026-08-01,Saturday,Sunny,1,Sports Meet,Samosa & Chai,260,224,135
+2026-08-01,Saturday,Sunny,1,Sports Meet,Fried Rice,136,106,83
+2026-08-01,Saturday,Sunny,1,Sports Meet,Sandwich,123,90,75
+2026-08-02,Sunday,Sunny,1,None,Veg Biryani,107,144,69
+2026-08-02,Sunday,Sunny,1,None,Chicken Biryani,142,180,101
+2026-08-02,Sunday,Sunny,1,None,Masala Dosa,119,128,67
+2026-08-02,Sunday,Sunny,1,None,Paneer Thali,59,94,60
+2026-08-02,Sunday,Sunny,1,None,Chole Bhature,132,137,77
+2026-08-02,Sunday,Sunny,1,None,Samosa & Chai,135,228,77
+2026-08-02,Sunday,Sunny,1,None,Fried Rice,83,113,68
+2026-08-02,Sunday,Sunny,1,None,Sandwich,75,93,60
+2026-08-03,Monday,Rainy,0,Exam Period,Veg Biryani,69,143,142
+2026-08-03,Monday,Rainy,0,Exam Period,Chicken Biryani,101,182,173
+2026-08-03,Monday,Rainy,0,Exam Period,Masala Dosa,67,126,89
+2026-08-03,Monday,Rainy,0,Exam Period,Paneer Thali,60,98,84
+2026-08-03,Monday,Rainy,0,Exam Period,Chole Bhature,77,136,115
+2026-08-03,Monday,Rainy,0,Exam Period,Samosa & Chai,77,219,312
+2026-08-03,Monday,Rainy,0,Exam Period,Fried Rice,68,113,108
+2026-08-03,Monday,Rainy,0,Exam Period,Sandwich,60,96,92
+2026-08-04,Tuesday,Rainy,0,Workshop,Veg Biryani,142,137,167
+2026-08-04,Tuesday,Rainy,0,Workshop,Chicken Biryani,173,174,211
+2026-08-04,Tuesday,Rainy,0,Workshop,Masala Dosa,89,121,121
+2026-08-04,Tuesday,Rainy,0,Workshop,Paneer Thali,84,94,116
+2026-08-04,Tuesday,Rainy,0,Workshop,Chole Bhature,115,130,141
+2026-08-04,Tuesday,Rainy,0,Workshop,Samosa & Chai,312,223,331
+2026-08-04,Tuesday,Rainy,0,Workshop,Fried Rice,108,110,131
+2026-08-04,Tuesday,Rainy,0,Workshop,Sandwich,92,96,90
+2026-08-05,Wednesday,Cloudy,0,None,Veg Biryani,167,133,141
+2026-08-05,Wednesday,Cloudy,0,None,Chicken Biryani,211,167,187
+2026-08-05,Wednesday,Cloudy,0,None,Masala Dosa,121,115,117
+2026-08-05,Wednesday,Cloudy,0,None,Paneer Thali,116,94,103
+2026-08-05,Wednesday,Cloudy,0,None,Chole Bhature,141,123,129
+2026-08-05,Wednesday,Cloudy,0,None,Samosa & Chai,331,228,227
+2026-08-05,Wednesday,Cloudy,0,None,Fried Rice,131,108,124
+2026-08-05,Wednesday,Cloudy,0,None,Sandwich,90,92,112
+2026-08-06,Thursday,Cold,0,College Fest,Veg Biryani,141,135,193
+2026-08-06,Thursday,Cold,0,College Fest,Chicken Biryani,187,173,243
+2026-08-06,Thursday,Cold,0,College Fest,Masala Dosa,117,116,145
+2026-08-06,Thursday,Cold,0,College Fest,Paneer Thali,103,95,114
+2026-08-06,Thursday,Cold,0,College Fest,Chole Bhature,129,126,164
+2026-08-06,Thursday,Cold,0,College Fest,Samosa & Chai,227,222,315
+2026-08-06,Thursday,Cold,0,College Fest,Fried Rice,124,111,143
+2026-08-06,Thursday,Cold,0,College Fest,Sandwich,112,93,99
+2026-08-07,Friday,Cold,0,College Fest,Veg Biryani,193,141,222
+2026-08-07,Friday,Cold,0,College Fest,Chicken Biryani,243,181,312
+2026-08-07,Friday,Cold,0,College Fest,Masala Dosa,145,117,170
+2026-08-07,Friday,Cold,0,College Fest,Paneer Thali,114,95,148
+2026-08-07,Friday,Cold,0,College Fest,Chole Bhature,164,131,200
+2026-08-07,Friday,Cold,0,College Fest,Samosa & Chai,315,237,369
+2026-08-07,Friday,Cold,0,College Fest,Fried Rice,143,113,166
+2026-08-07,Friday,Cold,0,College Fest,Sandwich,99,93,125
+2026-08-08,Saturday,Rainy,1,Sports Meet,Veg Biryani,222,149,112
+2026-08-08,Saturday,Rainy,1,Sports Meet,Chicken Biryani,312,196,134
+2026-08-08,Saturday,Rainy,1,Sports Meet,Masala Dosa,170,118,91
+2026-08-08,Saturday,Rainy,1,Sports Meet,Paneer Thali,148,98,63
+2026-08-08,Saturday,Rainy,1,Sports Meet,Chole Bhature,200,137,146
+2026-08-08,Saturday,Rainy,1,Sports Meet,Samosa & Chai,369,252,207
+2026-08-08,Saturday,Rainy,1,Sports Meet,Fried Rice,166,118,103
+2026-08-08,Saturday,Rainy,1,Sports Meet,Sandwich,125,93,62
+2026-08-09,Sunday,Sunny,1,None,Veg Biryani,112,149,79
+2026-08-09,Sunday,Sunny,1,None,Chicken Biryani,134,194,95
+2026-08-09,Sunday,Sunny,1,None,Masala Dosa,91,114,97
+2026-08-09,Sunday,Sunny,1,None,Paneer Thali,63,98,34
+2026-08-09,Sunday,Sunny,1,None,Chole Bhature,146,139,79
+2026-08-09,Sunday,Sunny,1,None,Samosa & Chai,207,263,88
+2026-08-09,Sunday,Sunny,1,None,Fried Rice,103,120,35
+2026-08-09,Sunday,Sunny,1,None,Sandwich,62,91,49
+2026-08-10,Monday,Cold,0,None,Veg Biryani,79,151,117
+2026-08-10,Monday,Cold,0,None,Chicken Biryani,95,194,160
+2026-08-10,Monday,Cold,0,None,Masala Dosa,97,119,116
+2026-08-10,Monday,Cold,0,None,Paneer Thali,34,95,116
+2026-08-10,Monday,Cold,0,None,Chole Bhature,79,139,128
+2026-08-10,Monday,Cold,0,None,Samosa & Chai,88,264,188
+2026-08-10,Monday,Cold,0,None,Fried Rice,35,116,95
+2026-08-10,Monday,Cold,0,None,Sandwich,49,90,90
+2026-08-11,Tuesday,Cloudy,0,College Fest,Veg Biryani,117,147,173
+2026-08-11,Tuesday,Cloudy,0,College Fest,Chicken Biryani,160,192,281
+2026-08-11,Tuesday,Cloudy,0,College Fest,Masala Dosa,116,122,162
+2026-08-11,Tuesday,Cloudy,0,College Fest,Paneer Thali,116,99,122
+2026-08-11,Tuesday,Cloudy,0,College Fest,Chole Bhature,128,141,150
+2026-08-11,Tuesday,Cloudy,0,College Fest,Samosa & Chai,188,246,354
+2026-08-11,Tuesday,Cloudy,0,College Fest,Fried Rice,95,114,143
+2026-08-11,Tuesday,Cloudy,0,College Fest,Sandwich,90,90,119
+2026-08-12,Wednesday,Cold,0,None,Veg Biryani,173,148,121
+2026-08-12,Wednesday,Cold,0,None,Chicken Biryani,281,202,166
+2026-08-12,Wednesday,Cold,0,None,Masala Dosa,162,128,125
+2026-08-12,Wednesday,Cold,0,None,Paneer Thali,122,100,110
+2026-08-12,Wednesday,Cold,0,None,Chole Bhature,150,142,125
+2026-08-12,Wednesday,Cold,0,None,Samosa & Chai,354,250,231
+2026-08-12,Wednesday,Cold,0,None,Fried Rice,143,116,104
+2026-08-12,Wednesday,Cold,0,None,Sandwich,119,94,94
+2026-08-13,Thursday,Sunny,0,None,Veg Biryani,121,145,144
+2026-08-13,Thursday,Sunny,0,None,Chicken Biryani,166,199,186
+2026-08-13,Thursday,Sunny,0,None,Masala Dosa,125,129,135
+2026-08-13,Thursday,Sunny,0,None,Paneer Thali,110,101,102
+2026-08-13,Thursday,Sunny,0,None,Chole Bhature,125,142,116
+2026-08-13,Thursday,Sunny,0,None,Samosa & Chai,231,250,247
+2026-08-13,Thursday,Sunny,0,None,Fried Rice,104,113,121
+2026-08-13,Thursday,Sunny,0,None,Sandwich,94,91,91
+2026-08-14,Friday,Cloudy,0,None,Veg Biryani,144,138,187
+2026-08-14,Friday,Cloudy,0,None,Chicken Biryani,186,191,212
+2026-08-14,Friday,Cloudy,0,None,Masala Dosa,135,128,162
+2026-08-14,Friday,Cloudy,0,None,Paneer Thali,102,99,133
+2026-08-14,Friday,Cloudy,0,None,Chole Bhature,116,135,179
+2026-08-14,Friday,Cloudy,0,None,Samosa & Chai,247,241,296
+2026-08-14,Friday,Cloudy,0,None,Fried Rice,121,110,136
+2026-08-14,Friday,Cloudy,0,None,Sandwich,91,90,122
+2026-08-15,Saturday,Cloudy,1,None,Veg Biryani,187,133,85
+2026-08-15,Saturday,Cloudy,1,None,Chicken Biryani,212,176,125
+2026-08-15,Saturday,Cloudy,1,None,Masala Dosa,162,127,75
+2026-08-15,Saturday,Cloudy,1,None,Paneer Thali,133,97,53
+2026-08-15,Saturday,Cloudy,1,None,Chole Bhature,179,132,111
+2026-08-15,Saturday,Cloudy,1,None,Samosa & Chai,296,230,81
+2026-08-15,Saturday,Cloudy,1,None,Fried Rice,136,105,52
+2026-08-15,Saturday,Cloudy,1,None,Sandwich,122,90,44
+2026-08-16,Sunday,Sunny,1,Sports Meet,Veg Biryani,85,129,82
+2026-08-16,Sunday,Sunny,1,Sports Meet,Chicken Biryani,125,175,126
+2026-08-16,Sunday,Sunny,1,Sports Meet,Masala Dosa,75,125,109
+2026-08-16,Sunday,Sunny,1,Sports Meet,Paneer Thali,53,96,52
+2026-08-16,Sunday,Sunny,1,Sports Meet,Chole Bhature,111,127,128
+2026-08-16,Sunday,Sunny,1,Sports Meet,Samosa & Chai,81,212,99
+2026-08-16,Sunday,Sunny,1,Sports Meet,Fried Rice,52,98,53
+2026-08-16,Sunday,Sunny,1,Sports Meet,Sandwich,44,87,66
+2026-08-17,Monday,Sunny,0,College Fest,Veg Biryani,82,130,184
+2026-08-17,Monday,Sunny,0,College Fest,Chicken Biryani,126,179,241
+2026-08-17,Monday,Sunny,0,College Fest,Masala Dosa,109,126,122
+2026-08-17,Monday,Sunny,0,College Fest,Paneer Thali,52,98,119
+2026-08-17,Monday,Sunny,0,College Fest,Chole Bhature,128,134,146
+2026-08-17,Monday,Sunny,0,College Fest,Samosa & Chai,99,214,326
+2026-08-17,Monday,Sunny,0,College Fest,Fried Rice,53,101,140
+2026-08-17,Monday,Sunny,0,College Fest,Sandwich,66,89,96
+2026-08-18,Tuesday,Sunny,1,None,Veg Biryani,184,139,85
+2026-08-18,Tuesday,Sunny,1,None,Chicken Biryani,241,191,107
+2026-08-18,Tuesday,Sunny,1,None,Masala Dosa,122,127,99
+2026-08-18,Tuesday,Sunny,1,None,Paneer Thali,119,99,64
+2026-08-18,Tuesday,Sunny,1,None,Chole Bhature,146,136,106
+2026-08-18,Tuesday,Sunny,1,None,Samosa & Chai,326,233,141
+2026-08-18,Tuesday,Sunny,1,None,Fried Rice,140,107,69
+2026-08-18,Tuesday,Sunny,1,None,Sandwich,96,90,65
+2026-08-19,Wednesday,Cloudy,0,None,Veg Biryani,85,127,146
+2026-08-19,Wednesday,Cloudy,0,None,Chicken Biryani,107,166,168
+2026-08-19,Wednesday,Cloudy,0,None,Masala Dosa,99,118,126
+2026-08-19,Wednesday,Cloudy,0,None,Paneer Thali,64,90,105
+2026-08-19,Wednesday,Cloudy,0,None,Chole Bhature,106,130,158
+2026-08-19,Wednesday,Cloudy,0,None,Samosa & Chai,141,203,232
+2026-08-19,Wednesday,Cloudy,0,None,Fried Rice,69,96,114
+2026-08-19,Wednesday,Cloudy,0,None,Sandwich,65,83,101
+2026-08-20,Thursday,Cold,0,None,Veg Biryani,146,130,134
+2026-08-20,Thursday,Cold,0,None,Chicken Biryani,168,166,166
+2026-08-20,Thursday,Cold,0,None,Masala Dosa,126,118,127
+2026-08-20,Thursday,Cold,0,None,Paneer Thali,105,90,113
+2026-08-20,Thursday,Cold,0,None,Chole Bhature,158,135,120
+2026-08-20,Thursday,Cold,0,None,Samosa & Chai,232,203,203
+2026-08-20,Thursday,Cold,0,None,Fried Rice,114,98,109
+2026-08-20,Thursday,Cold,0,None,Sandwich,101,84,74
+2026-08-21,Friday,Cloudy,0,None,Veg Biryani,134,129,150
+2026-08-21,Friday,Cloudy,0,None,Chicken Biryani,166,164,231
+2026-08-21,Friday,Cloudy,0,None,Masala Dosa,127,117,166
+2026-08-21,Friday,Cloudy,0,None,Paneer Thali,113,91,130
+2026-08-21,Friday,Cloudy,0,None,Chole Bhature,120,135,162
+2026-08-21,Friday,Cloudy,0,None,Samosa & Chai,203,197,270
+2026-08-21,Friday,Cloudy,0,None,Fried Rice,109,96,169
+2026-08-21,Friday,Cloudy,0,None,Sandwich,74,81,123
+2026-08-22,Saturday,Cold,1,None,Veg Biryani,150,124,72
+2026-08-22,Saturday,Cold,1,None,Chicken Biryani,231,166,85
+2026-08-22,Saturday,Cold,1,None,Masala Dosa,166,118,65
+2026-08-22,Saturday,Cold,1,None,Paneer Thali,130,91,46
+2026-08-22,Saturday,Cold,1,None,Chole Bhature,162,133,86
+2026-08-22,Saturday,Cold,1,None,Samosa & Chai,270,193,81
+2026-08-22,Saturday,Cold,1,None,Fried Rice,169,101,54
+2026-08-22,Saturday,Cold,1,None,Sandwich,123,81,49
+2026-08-23,Sunday,Cloudy,1,Sports Meet,Veg Biryani,72,122,106
+2026-08-23,Sunday,Cloudy,1,Sports Meet,Chicken Biryani,85,161,128
+2026-08-23,Sunday,Cloudy,1,Sports Meet,Masala Dosa,65,116,94
+2026-08-23,Sunday,Cloudy,1,Sports Meet,Paneer Thali,46,90,65
+2026-08-23,Sunday,Cloudy,1,Sports Meet,Chole Bhature,86,129,111
+2026-08-23,Sunday,Cloudy,1,Sports Meet,Samosa & Chai,81,193,108
+2026-08-23,Sunday,Cloudy,1,Sports Meet,Fried Rice,54,101,85
+2026-08-23,Sunday,Cloudy,1,Sports Meet,Sandwich,49,82,71
+2026-08-24,Monday,Cloudy,0,Exam Period,Veg Biryani,106,125,105
+2026-08-24,Monday,Cloudy,0,Exam Period,Chicken Biryani,128,161,143
+2026-08-24,Monday,Cloudy,0,Exam Period,Masala Dosa,94,114,96
+2026-08-24,Monday,Cloudy,0,Exam Period,Paneer Thali,65,92,80
+2026-08-24,Monday,Cloudy,0,Exam Period,Chole Bhature,111,127,119
+2026-08-24,Monday,Cloudy,0,Exam Period,Samosa & Chai,108,194,275
+2026-08-24,Monday,Cloudy,0,Exam Period,Fried Rice,85,106,82
+2026-08-24,Monday,Cloudy,0,Exam Period,Sandwich,71,83,108
+2026-08-25,Tuesday,Sunny,0,None,Veg Biryani,105,114,132
+2026-08-25,Tuesday,Sunny,0,None,Chicken Biryani,143,147,168
+2026-08-25,Tuesday,Sunny,0,None,Masala Dosa,96,110,119
+2026-08-25,Tuesday,Sunny,0,None,Paneer Thali,80,86,102
+2026-08-25,Tuesday,Sunny,0,None,Chole Bhature,119,123,131
+2026-08-25,Tuesday,Sunny,0,None,Samosa & Chai,275,187,205
+2026-08-25,Tuesday,Sunny,0,None,Fried Rice,82,97,118
+2026-08-25,Tuesday,Sunny,0,None,Sandwich,108,84,95
+2026-08-26,Wednesday,Cold,0,Sports Meet,Veg Biryani,132,121,172
+2026-08-26,Wednesday,Cold,0,Sports Meet,Chicken Biryani,168,156,205
+2026-08-26,Wednesday,Cold,0,Sports Meet,Masala Dosa,119,113,150
+2026-08-26,Wednesday,Cold,0,Sports Meet,Paneer Thali,102,92,144
+2026-08-26,Wednesday,Cold,0,Sports Meet,Chole Bhature,131,127,168
+2026-08-26,Wednesday,Cold,0,Sports Meet,Samosa & Chai,205,196,257
+2026-08-26,Wednesday,Cold,0,Sports Meet,Fried Rice,118,104,144
+2026-08-26,Wednesday,Cold,0,Sports Meet,Sandwich,95,89,124
+2026-08-27,Thursday,Rainy,0,Workshop,Veg Biryani,172,124,161
+2026-08-27,Thursday,Rainy,0,Workshop,Chicken Biryani,205,161,228
+2026-08-27,Thursday,Rainy,0,Workshop,Masala Dosa,150,117,113
+2026-08-27,Thursday,Rainy,0,Workshop,Paneer Thali,144,97,129
+2026-08-27,Thursday,Rainy,0,Workshop,Chole Bhature,168,128,145
+2026-08-27,Thursday,Rainy,0,Workshop,Samosa & Chai,257,200,301
+2026-08-27,Thursday,Rainy,0,Workshop,Fried Rice,144,109,115
+2026-08-27,Thursday,Rainy,0,Workshop,Sandwich,124,92,96
+2026-08-28,Friday,Sunny,0,None,Veg Biryani,161,128,171
+2026-08-28,Friday,Sunny,0,None,Chicken Biryani,228,170,196
+2026-08-28,Friday,Sunny,0,None,Masala Dosa,113,115,156
+2026-08-28,Friday,Sunny,0,None,Paneer Thali,129,99,117
+2026-08-28,Friday,Sunny,0,None,Chole Bhature,145,132,155
+2026-08-28,Friday,Sunny,0,None,Samosa & Chai,301,214,242
+2026-08-28,Friday,Sunny,0,None,Fried Rice,115,110,131
+2026-08-28,Friday,Sunny,0,None,Sandwich,96,95,114
+2026-08-29,Saturday,Sunny,1,Sports Meet,Veg Biryani,171,131,86
+2026-08-29,Saturday,Sunny,1,Sports Meet,Chicken Biryani,196,165,124
+2026-08-29,Saturday,Sunny,1,Sports Meet,Masala Dosa,156,113,116
+2026-08-29,Saturday,Sunny,1,Sports Meet,Paneer Thali,117,98,53
+2026-08-29,Saturday,Sunny,1,Sports Meet,Chole Bhature,155,131,134
+2026-08-29,Saturday,Sunny,1,Sports Meet,Samosa & Chai,242,210,120
+2026-08-29,Saturday,Sunny,1,Sports Meet,Fried Rice,131,104,85
+2026-08-29,Saturday,Sunny,1,Sports Meet,Sandwich,114,94,87
+2026-08-30,Sunday,Cloudy,1,Sports Meet,Veg Biryani,86,133,56
+2026-08-30,Sunday,Cloudy,1,Sports Meet,Chicken Biryani,124,170,103
+2026-08-30,Sunday,Cloudy,1,Sports Meet,Masala Dosa,116,121,100
+2026-08-30,Sunday,Cloudy,1,Sports Meet,Paneer Thali,53,99,50
+2026-08-30,Sunday,Cloudy,1,Sports Meet,Chole Bhature,134,138,114
+2026-08-30,Sunday,Cloudy,1,Sports Meet,Samosa & Chai,120,215,113
+2026-08-30,Sunday,Cloudy,1,Sports Meet,Fried Rice,85,109,71
+2026-08-30,Sunday,Cloudy,1,Sports Meet,Sandwich,87,99,66
+2026-08-31,Monday,Sunny,1,None,Veg Biryani,56,126,100
+2026-08-31,Monday,Sunny,1,None,Chicken Biryani,103,167,120
+2026-08-31,Monday,Sunny,1,None,Masala Dosa,100,121,98
+2026-08-31,Monday,Sunny,1,None,Paneer Thali,50,96,49
+2026-08-31,Monday,Sunny,1,None,Chole Bhature,114,138,106
+2026-08-31,Monday,Sunny,1,None,Samosa & Chai,113,216,118
+2026-08-31,Monday,Sunny,1,None,Fried Rice,71,107,75
+2026-08-31,Monday,Sunny,1,None,Sandwich,66,99,64
+2026-09-01,Tuesday,Cold,0,None,Veg Biryani,100,125,136
+2026-09-01,Tuesday,Cold,0,None,Chicken Biryani,120,163,197
+2026-09-01,Tuesday,Cold,0,None,Masala Dosa,98,122,127
+2026-09-01,Tuesday,Cold,0,None,Paneer Thali,49,92,102
+2026-09-01,Tuesday,Cold,0,None,Chole Bhature,106,136,137
+2026-09-01,Tuesday,Cold,0,None,Samosa & Chai,118,194,202
+2026-09-01,Tuesday,Cold,0,None,Fried Rice,75,106,89
+2026-09-01,Tuesday,Cold,0,None,Sandwich,64,92,82
+2026-09-02,Wednesday,Sunny,0,Sports Meet,Veg Biryani,136,126,161
+2026-09-02,Wednesday,Sunny,0,Sports Meet,Chicken Biryani,197,168,224
+2026-09-02,Wednesday,Sunny,0,Sports Meet,Masala Dosa,127,123,164
+2026-09-02,Wednesday,Sunny,0,Sports Meet,Paneer Thali,102,92,159
+2026-09-02,Wednesday,Sunny,0,Sports Meet,Chole Bhature,137,137,174
+2026-09-02,Wednesday,Sunny,0,Sports Meet,Samosa & Chai,202,193,285
+2026-09-02,Wednesday,Sunny,0,Sports Meet,Fried Rice,89,101,159
+2026-09-02,Wednesday,Sunny,0,Sports Meet,Sandwich,82,90,107
+2026-09-03,Thursday,Sunny,0,College Fest,Veg Biryani,161,124,196
+2026-09-03,Thursday,Sunny,0,College Fest,Chicken Biryani,224,170,270
+2026-09-03,Thursday,Sunny,0,College Fest,Masala Dosa,164,125,138
+2026-09-03,Thursday,Sunny,0,College Fest,Paneer Thali,159,94,139
+2026-09-03,Thursday,Sunny,0,College Fest,Chole Bhature,174,138,176
+2026-09-03,Thursday,Sunny,0,College Fest,Samosa & Chai,285,197,329
+2026-09-03,Thursday,Sunny,0,College Fest,Fried Rice,159,104,153
+2026-09-03,Thursday,Sunny,0,College Fest,Sandwich,107,88,130
+2026-09-04,Friday,Cold,0,None,Veg Biryani,196,129,162
+2026-09-04,Friday,Cold,0,None,Chicken Biryani,270,176,203
+2026-09-04,Friday,Cold,0,None,Masala Dosa,138,128,138
+2026-09-04,Friday,Cold,0,None,Paneer Thali,139,96,118
+2026-09-04,Friday,Cold,0,None,Chole Bhature,176,142,157
+2026-09-04,Friday,Cold,0,None,Samosa & Chai,329,201,235
+2026-09-04,Friday,Cold,0,None,Fried Rice,153,109,132
+2026-09-04,Friday,Cold,0,None,Sandwich,130,93,104
+2026-09-05,Saturday,Cold,1,None,Veg Biryani,162,128,79
+2026-09-05,Saturday,Cold,1,None,Chicken Biryani,203,177,104
+2026-09-05,Saturday,Cold,1,None,Masala Dosa,138,126,91
+2026-09-05,Saturday,Cold,1,None,Paneer Thali,118,96,40
+2026-09-05,Saturday,Cold,1,None,Chole Bhature,157,143,92
+2026-09-05,Saturday,Cold,1,None,Samosa & Chai,235,200,89
+2026-09-05,Saturday,Cold,1,None,Fried Rice,132,109,56
+2026-09-05,Saturday,Cold,1,None,Sandwich,104,91,61
+2026-09-06,Sunday,Cloudy,1,None,Veg Biryani,79,127,77
+2026-09-06,Sunday,Cloudy,1,None,Chicken Biryani,104,174,78
+2026-09-06,Sunday,Cloudy,1,None,Masala Dosa,91,122,84
+2026-09-06,Sunday,Cloudy,1,None,Paneer Thali,40,94,53
+2026-09-06,Sunday,Cloudy,1,None,Chole Bhature,92,137,92
+2026-09-06,Sunday,Cloudy,1,None,Samosa & Chai,89,196,133
+2026-09-06,Sunday,Cloudy,1,None,Fried Rice,56,105,48
+2026-09-06,Sunday,Cloudy,1,None,Sandwich,61,88,43
+2026-09-07,Monday,Sunny,0,Exam Period,Veg Biryani,77,130,96
+2026-09-07,Monday,Sunny,0,Exam Period,Chicken Biryani,78,171,169
+2026-09-07,Monday,Sunny,0,Exam Period,Masala Dosa,84,120,111
+2026-09-07,Monday,Sunny,0,Exam Period,Paneer Thali,53,94,91
+2026-09-07,Monday,Sunny,0,Exam Period,Chole Bhature,92,133,112
+2026-09-07,Monday,Sunny,0,Exam Period,Samosa & Chai,133,199,220
+2026-09-07,Monday,Sunny,0,Exam Period,Fried Rice,48,102,121
+2026-09-07,Monday,Sunny,0,Exam Period,Sandwich,43,84,105
+2026-09-08,Tuesday,Sunny,0,Exam Period,Veg Biryani,96,130,125
+2026-09-08,Tuesday,Sunny,0,Exam Period,Chicken Biryani,169,178,165
+2026-09-08,Tuesday,Sunny,0,Exam Period,Masala Dosa,111,122,115
+2026-09-08,Tuesday,Sunny,0,Exam Period,Paneer Thali,91,100,99
+2026-09-08,Tuesday,Sunny,0,Exam Period,Chole Bhature,112,134,106
+2026-09-08,Tuesday,Sunny,0,Exam Period,Samosa & Chai,220,213,261
+2026-09-08,Tuesday,Sunny,0,Exam Period,Fried Rice,121,108,120
+2026-09-08,Tuesday,Sunny,0,Exam Period,Sandwich,105,90,120
+2026-09-09,Wednesday,Sunny,0,Workshop,Veg Biryani,125,128,181
+2026-09-09,Wednesday,Sunny,0,Workshop,Chicken Biryani,165,173,194
+2026-09-09,Wednesday,Sunny,0,Workshop,Masala Dosa,115,120,134
+2026-09-09,Wednesday,Sunny,0,Workshop,Paneer Thali,99,100,126
+2026-09-09,Wednesday,Sunny,0,Workshop,Chole Bhature,106,130,151
+2026-09-09,Wednesday,Sunny,0,Workshop,Samosa & Chai,261,222,274
+2026-09-09,Wednesday,Sunny,0,Workshop,Fried Rice,120,113,116
+2026-09-09,Wednesday,Sunny,0,Workshop,Sandwich,120,96,122
+2026-09-10,Thursday,Cold,1,None,Veg Biryani,181,131,86
+2026-09-10,Thursday,Cold,1,None,Chicken Biryani,194,169,112
+2026-09-10,Thursday,Cold,1,None,Masala Dosa,134,116,87
+2026-09-10,Thursday,Cold,1,None,Paneer Thali,126,95,38
+2026-09-10,Thursday,Cold,1,None,Chole Bhature,151,127,122
+2026-09-10,Thursday,Cold,1,None,Samosa & Chai,274,220,129
+2026-09-10,Thursday,Cold,1,None,Fried Rice,116,107,60
+2026-09-10,Thursday,Cold,1,None,Sandwich,122,98,59
+2026-09-11,Friday,Cold,0,None,Veg Biryani,86,115,156
+2026-09-11,Friday,Cold,0,None,Chicken Biryani,112,146,225
+2026-09-11,Friday,Cold,0,None,Masala Dosa,87,109,140
+2026-09-11,Friday,Cold,0,None,Paneer Thali,38,81,112
+2026-09-11,Friday,Cold,0,None,Chole Bhature,122,119,145
+2026-09-11,Friday,Cold,0,None,Samosa & Chai,129,192,246
+2026-09-11,Friday,Cold,0,None,Fried Rice,60,93,104
+2026-09-11,Friday,Cold,0,None,Sandwich,59,88,108
+2026-09-12,Saturday,Sunny,1,None,Veg Biryani,156,114,75
+2026-09-12,Saturday,Sunny,1,None,Chicken Biryani,225,150,115
+2026-09-12,Saturday,Sunny,1,None,Masala Dosa,140,109,103
+2026-09-12,Saturday,Sunny,1,None,Paneer Thali,112,80,57
+2026-09-12,Saturday,Sunny,1,None,Chole Bhature,145,117,96
+2026-09-12,Saturday,Sunny,1,None,Samosa & Chai,246,193,92
+2026-09-12,Saturday,Sunny,1,None,Fried Rice,104,89,89
+2026-09-12,Saturday,Sunny,1,None,Sandwich,108,88,61
+2026-09-13,Sunday,Sunny,1,None,Veg Biryani,75,114,68
+2026-09-13,Sunday,Sunny,1,None,Chicken Biryani,115,151,92
+2026-09-13,Sunday,Sunny,1,None,Masala Dosa,103,111,77
+2026-09-13,Sunday,Sunny,1,None,Paneer Thali,57,82,40
+2026-09-13,Sunday,Sunny,1,None,Chole Bhature,96,118,81
+2026-09-13,Sunday,Sunny,1,None,Samosa & Chai,92,194,89
+2026-09-13,Sunday,Sunny,1,None,Fried Rice,89,94,56
+2026-09-13,Sunday,Sunny,1,None,Sandwich,61,88,49
+2026-09-14,Monday,Sunny,0,None,Veg Biryani,68,112,124
+2026-09-14,Monday,Sunny,0,None,Chicken Biryani,92,153,168
+2026-09-14,Monday,Sunny,0,None,Masala Dosa,77,110,116
+2026-09-14,Monday,Sunny,0,None,Paneer Thali,40,80,118
+2026-09-14,Monday,Sunny,0,None,Chole Bhature,81,116,94
+2026-09-14,Monday,Sunny,0,None,Samosa & Chai,89,187,229
+2026-09-14,Monday,Sunny,0,None,Fried Rice,56,95,122
+2026-09-14,Monday,Sunny,0,None,Sandwich,49,89,74
+2026-09-15,Tuesday,Cloudy,0,Exam Period,Veg Biryani,124,116,119
+2026-09-15,Tuesday,Cloudy,0,Exam Period,Chicken Biryani,168,153,148
+2026-09-15,Tuesday,Cloudy,0,Exam Period,Masala Dosa,116,110,96
+2026-09-15,Tuesday,Cloudy,0,Exam Period,Paneer Thali,118,84,90
+2026-09-15,Tuesday,Cloudy,0,Exam Period,Chole Bhature,94,114,102
+2026-09-15,Tuesday,Cloudy,0,Exam Period,Samosa & Chai,229,189,285
+2026-09-15,Tuesday,Cloudy,0,Exam Period,Fried Rice,122,95,111
+2026-09-15,Tuesday,Cloudy,0,Exam Period,Sandwich,74,85,119
+2026-09-16,Wednesday,Sunny,0,None,Veg Biryani,119,116,156
+2026-09-16,Wednesday,Sunny,0,None,Chicken Biryani,148,151,167
+2026-09-16,Wednesday,Sunny,0,None,Masala Dosa,96,108,126
+2026-09-16,Wednesday,Sunny,0,None,Paneer Thali,90,83,120
+2026-09-16,Wednesday,Sunny,0,None,Chole Bhature,102,113,123
+2026-09-16,Wednesday,Sunny,0,None,Samosa & Chai,285,192,244
+2026-09-16,Wednesday,Sunny,0,None,Fried Rice,111,94,118
+2026-09-16,Wednesday,Sunny,0,None,Sandwich,119,85,97
+2026-09-17,Thursday,Sunny,0,None,Veg Biryani,156,112,151
+2026-09-17,Thursday,Sunny,0,None,Chicken Biryani,167,147,185
+2026-09-17,Thursday,Sunny,0,None,Masala Dosa,126,106,124
+2026-09-17,Thursday,Sunny,0,None,Paneer Thali,120,82,123
+2026-09-17,Thursday,Sunny,0,None,Chole Bhature,123,109,121
+2026-09-17,Thursday,Sunny,0,None,Samosa & Chai,244,188,235
+2026-09-17,Thursday,Sunny,0,None,Fried Rice,118,94,123
+2026-09-17,Thursday,Sunny,0,None,Sandwich,97,81,94
+2026-09-18,Friday,Sunny,0,None,Veg Biryani,151,121,172
+2026-09-18,Friday,Sunny,0,None,Chicken Biryani,185,157,191
+2026-09-18,Friday,Sunny,0,None,Masala Dosa,124,112,159
+2026-09-18,Friday,Sunny,0,None,Paneer Thali,123,94,130
+2026-09-18,Friday,Sunny,0,None,Chole Bhature,121,109,150
+2026-09-18,Friday,Sunny,0,None,Samosa & Chai,235,203,283
+2026-09-18,Friday,Sunny,0,None,Fried Rice,123,103,131
+2026-09-18,Friday,Sunny,0,None,Sandwich,94,86,103
+2026-09-19,Saturday,Sunny,1,None,Veg Biryani,172,124,59
+2026-09-19,Saturday,Sunny,1,None,Chicken Biryani,191,152,113
+2026-09-19,Saturday,Sunny,1,None,Masala Dosa,159,114,72
+2026-09-19,Saturday,Sunny,1,None,Paneer Thali,130,97,63
+2026-09-19,Saturday,Sunny,1,None,Chole Bhature,150,110,77
+2026-09-19,Saturday,Sunny,1,None,Samosa & Chai,283,208,143
+2026-09-19,Saturday,Sunny,1,None,Fried Rice,131,107,66
+2026-09-19,Saturday,Sunny,1,None,Sandwich,103,85,60
+2026-09-20,Sunday,Sunny,1,Sports Meet,Veg Biryani,59,121,79
+2026-09-20,Sunday,Sunny,1,Sports Meet,Chicken Biryani,113,152,121
+2026-09-20,Sunday,Sunny,1,Sports Meet,Masala Dosa,72,110,93
+2026-09-20,Sunday,Sunny,1,Sports Meet,Paneer Thali,63,98,61
+2026-09-20,Sunday,Sunny,1,Sports Meet,Chole Bhature,77,107,111
+2026-09-20,Sunday,Sunny,1,Sports Meet,Samosa & Chai,143,215,126
+2026-09-20,Sunday,Sunny,1,Sports Meet,Fried Rice,66,104,66
+2026-09-20,Sunday,Sunny,1,Sports Meet,Sandwich,60,85,66

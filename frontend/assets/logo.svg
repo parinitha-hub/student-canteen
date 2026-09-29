@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7a18" />
+      <stop offset="50%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+
+    <!-- Golden Cloche Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe270" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Squircle App Icon Base -->
+  <rect x="25" y="25" width="450" height="450" rx="95" fill="url(#bgGrad)" />
+
+  <!-- Inner Soft Border -->
+  <rect x="27" y="27" width="446" height="446" rx="93" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="4" />
+
+  <!-- Rising Steam Ribbon 1 -->
+  <path d="M 215 130 C 205 105, 235 90, 220 70" fill="none" stroke="#ffe270" stroke-width="7" stroke-linecap="round" opacity="0.9" />
+  <!-- Rising Steam Ribbon 2 -->
+  <path d="M 250 120 C 240 95, 270 80, 255 60" fill="none" stroke="#ffe270" stroke-width="8" stroke-linecap="round" />
+  <!-- Rising Steam Ribbon 3 -->
+  <path d="M 285 130 C 275 105, 305 90, 290 70" fill="none" stroke="#ffe270" stroke-width="7" stroke-linecap="round" opacity="0.9" />
+
+  <!-- Cloche Handle Ring -->
+  <circle cx="250" cy="142" r="16" fill="none" stroke="url(#goldGrad)" stroke-width="9" />
+
+  <!-- Cloche Dome -->
+  <path d="M 140 260 C 140 185, 190 152, 250 152 C 310 152, 360 185, 360 260 Z" fill="url(#goldGrad)" />
+
+  <!-- Cloche AI Highlight / Cutout -->
+  <path d="M 152 254 C 158 198, 198 165, 250 165 C 255 165, 250 200, 235 230 C 220 254, 180 256, 152 254 Z" fill="rgba(255, 255, 255, 0.35)" />
+
+  <!-- AI Circuit Tracks (Inside Cloche Right Wing) -->
+  <g stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+    <!-- Trace 1 -->
+    <path d="M 250 255 L 250 220 L 285 220 L 310 200" fill="none" stroke-width="5" />
+    <circle cx="310" cy="200" r="5" fill="#ffffff" />
+
+    <!-- Trace 2 -->
+    <path d="M 268 255 L 268 238 L 320 238 L 332 225" fill="none" stroke-width="5" />
+    <circle cx="332" cy="225" r="5" fill="#ffffff" />
+
+    <!-- Trace 3 -->
+    <path d="M 235 255 L 235 240 L 210 240" fill="none" stroke-width="4.5" />
+    <circle cx="210" cy="240" r="4.5" fill="#ffffff" />
+  </g>
+
+  <!-- AI Node Sparkles -->
+  <polygon points="340,185 343,193 351,196 343,199 340,207 337,199 329,196 337,193" fill="#ffffff" />
+  <polygon points="358,218 360,223 365,225 360,227 358,232 356,227 351,225 356,223" fill="#ffe270" />
+
+  <!-- Serving Tray Platter -->
+  <path d="M 120 270 C 120 264, 130 262, 140 262 L 360 262 C 370 262, 380 264, 380 270 C 380 276, 370 282, 355 284 L 145 284 C 130 282, 120 276, 120 270 Z" fill="url(#goldGrad)" filter="url(#glow)" />
+
+  <!-- Typography -->
+  <text x="250" y="365" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="44" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="4">SAVITHA</text>
+  <text x="250" y="405" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="700" fill="#ffe270" text-anchor="middle" letter-spacing="8">CANTEEN</text>
+  <text x="250" y="430" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="600" fill="rgba(255,255,255,0.85)" text-anchor="middle" letter-spacing="2">SMART DINING &amp; AI DEMAND</text>
+</svg>

@@ -1,0 +1,2216 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+  <meta name="theme-color" content="#4f46e5">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <title>Savitha Canteen — Smart Campus Dining</title>
+
+  <meta name="description"
+    content="Savitha Canteen campus food ordering and AI demand prediction system developed by Parinitha.S.">
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <link rel="shortcut icon" href="assets/favicon.ico">
+
+  <link rel="apple-touch-icon" href="assets/logo.png">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+
+
+  <!-- =========================================================================
+       2. OFFICIAL TOP NAVIGATION HEADER
+       ========================================================================= -->
+  <header class="main-header">
+    <div class="container nav-bar">
+      <!-- Brand Logo -->
+      <a href="#" class="brand" onclick="navigateToSection('about'); return false;"
+        title="Savitha Canteen - Smart Campus Dining">
+        <img src="assets/logo.png" alt="Savitha Canteen Logo" class="brand-logo-img">
+        <div class="brand-text-wrap">
+          <div class="brand-title">Savitha <span>Canteen</span></div>
+          <div class="brand-dev-badge">Official Campus Dining Portal</div>
+        </div>
+      </a>
+
+      <!-- Navigation Links: On About webpage, Menu and My Orders are hidden -->
+      <nav class="nav-links" id="main-nav-links" style="display:flex; align-items:center; gap:8px;">
+        <button type="button" class="official-nav-btn active" id="nav-btn-about" onclick="navigateToSection('about')">
+          <span>🏛️</span> About
+        </button>
+        <button type="button" class="official-nav-btn" id="nav-btn-reviews" onclick="navigateToSection('reviews')">
+          <span>⭐</span> Reviews
+        </button>
+        <button type="button" class="official-nav-btn" id="nav-btn-home" onclick="navigateToSection('home')"
+          style="display:none;">
+          <span>🍽️</span> Menu
+        </button>
+        <button type="button" class="official-nav-btn" id="btn-top-my-orders-nav" onclick="openMyOrdersModal()"
+          style="display:none;">
+          <span>📦</span> My Orders <span class="orders-count-badge" id="my-orders-count" style="display:none;">0</span>
+        </button>
+        <button type="button" class="official-nav-btn kitchen-only" id="nav-btn-kitchen"
+          onclick="navigateToSection('kitchen')" style="display:none;">
+          <span>👨‍🍳</span> Staff Portal
+        </button>
+        <!-- Quick Device Link: Scan QR to open on phones or other laptops -->
+        <button type="button" class="btn-network-qr-btn" onclick="openNetworkShareModal()"
+          title="Open website on your phone or other laptops"
+          style="background:linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border:1.5px solid #93c5fd; color:#1d4ed8; font-size:0.8rem; font-weight:800; padding:6px 12px; border-radius:999px; cursor:pointer; display:inline-flex; align-items:center; gap:5px; transition:transform 0.15s ease;">
+          <span>📱</span> <span class="hide-on-mobile-text">Phone / Share</span>
+        </button>
+
+        <div id="user-auth-slot">
+          <button type="button" class="btn-top-login" id="btn-top-login" onclick="navigateToSection('login')"
+            title="Go to Login Page">
+            <span class="top-login-icon">👤</span>
+            <span class="top-login-text">Login</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+
+
+
+  <main class="container">
+
+
+
+    <!-- =========================================================================
+
+         1. ABOUT THE WEBSITE (CLEAN, SIMPLE & ELEGANT)
+
+         ========================================================================= -->
+
+    <div id="view-about" style="display:block;">
+
+      <!-- Clean, Inviting Hero Banner -->
+      <div class="hero-section" style="margin-bottom:24px; min-height:220px; padding:36px 24px; text-align:center;">
+        <img src="assets/hero_banner.jpg" alt="Delicious Canteen Food" class="hero-img" fetchpriority="high"
+          onerror="this.style.display='none';">
+
+        <div class="hero-content" style="position:relative; z-index:2; max-width:760px; margin:0 auto;">
+          <div class="hero-floating-badge"
+            style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.18); border:1px solid rgba(255,255,255,0.32); padding:5px 16px; border-radius:999px; margin-bottom:12px; font-size:0.84rem; font-weight:700; color:#ffffff; backdrop-filter:blur(8px);">
+            <span>🏛️ Savitha University</span>
+            <span>•</span>
+            <span>Official Dining Services</span>
+            <span>•</span>
+            <span>⚡ By <strong>Parinitha.S</strong></span>
+          </div>
+
+          <h1 class="hero-title" style="font-size:2.4rem; font-weight:900; margin-bottom:8px;">Savitha Canteen</h1>
+
+          <p class="hero-subtitle" style="font-size:1.05rem; margin-bottom:20px; color:#f1f5f9;">
+            Smart campus food ordering with instant digital pickup tokens &amp; zero waiting.
+          </p>
+
+          <div class="hero-cta-row" style="justify-content:center;">
+            <button type="button" class="btn-hero-primary" id="about-hero-primary-btn"
+              onclick="handleMenuAccessRequest()">
+              <span>🍽️</span> Login to Order Food →
+            </button>
+            <button type="button" class="btn-hero-secondary"
+              onclick="document.getElementById('about-website').scrollIntoView({behavior:'smooth'})">
+              <span>📖</span> How It Works
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Simple Highlights & Developer Info (Clean & Concise) -->
+      <section id="about-website" class="about-section" style="padding-top:10px; padding-bottom:24px;">
+        <div class="section-badge-center">
+          <span>💡 Campus Dining Made Simple</span>
+        </div>
+        <h2 class="section-main-heading">How Savitha Canteen Works</h2>
+        <p class="section-sub-heading">Three simple steps to order fresh food without standing in cafeteria lines.</p>
+
+        <div class="about-cards-grid">
+          <div class="about-card">
+            <div class="about-card-icon">🍽️</div>
+            <h3 class="about-card-title">1. Select Your Dishes</h3>
+            <p class="about-card-desc">Choose from 30+ hot meals, biryanis, dosas, and snacks directly from your phone
+              or laptop.</p>
+          </div>
+
+          <div class="about-card">
+            <div class="about-card-icon">🎫</div>
+            <h3 class="about-card-title">2. Get Instant Token</h3>
+            <p class="about-card-desc">Order to receive your unique pickup token (e.g. #A-14) with live kitchen status.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <div class="about-card-icon">⚡</div>
+            <h3 class="about-card-title">3. Zero-Wait Pickup</h3>
+            <p class="about-card-desc">Walk up to the counter when your token is called and collect your hot, fresh meal
+              immediately.</p>
+          </div>
+        </div>
+
+        <!-- Clean Canteen Info Card -->
+        <div
+          style="background:#ffffff; border:1.5px solid var(--border); border-radius:14px; padding:16px 20px; margin-top:20px; display:flex; justify-content:space-around; align-items:center; flex-wrap:wrap; gap:12px; box-shadow:var(--shadow-sm);">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:1.3rem;">🕒</span>
+            <div>
+              <div style="font-size:0.88rem; font-weight:800; color:var(--text-main);">Daily Dining Hours</div>
+              <div style="font-size:0.78rem; color:var(--text-muted);">7:30 AM – 8:30 PM (Mon – Sun)</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:1.3rem;">📍</span>
+            <div>
+              <div style="font-size:0.88rem; font-weight:800; color:var(--text-main);">Location</div>
+              <div style="font-size:0.78rem; color:var(--text-muted);">Main Dining Complex, Counters 1–4</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:1.3rem;">🛡️</span>
+            <div>
+              <div style="font-size:0.88rem; font-weight:800; color:var(--text-main);">Quality Assured</div>
+              <div style="font-size:0.78rem; color:var(--text-muted);">FSSAI Certified Fresh Campus Meals</div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Official Developer & AI Architect Spotlight: Parinitha.S -->
+        <div class="developer-spotlight-card"
+          style="margin-top:24px; padding:24px 28px; background:#ffffff; border:1.5px solid var(--border); border-radius:16px; box-shadow:var(--shadow-sm); transition:transform 0.3s ease, box-shadow 0.3s ease;">
+          <div class="dev-spotlight-grid" style="display:flex; align-items:center; gap:22px; flex-wrap:wrap;">
+            <div class="dev-avatar-wrap" style="position:relative; width:92px; height:92px; min-width:92px;">
+              <img src="assets/parinitha.jpg" alt="Parinitha.S - Website Developer &amp; AI Architect"
+                style="width:92px; height:92px; border-radius:50%; object-fit:cover; border:3px solid #6366f1; box-shadow:0 4px 16px rgba(99, 102, 241, 0.28);"
+                onerror="this.onerror=null; this.src='assets/logo.png';">
+              <div class="dev-status-indicator" title="Verified Creator &amp; Systems Architect"
+                style="position:absolute; bottom:2px; right:2px; background:#10b981; color:#fff; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:900; border:2.5px solid #ffffff;">
+                ✓</div>
+            </div>
+            <div class="dev-info-col" style="flex:1; min-width:260px;">
+              <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:6px;">
+                <span
+                  style="font-size:0.75rem; font-weight:800; color:var(--primary); background:#eef2ff; border:1px solid #c7d2fe; padding:3px 10px; border-radius:999px; text-transform:uppercase; letter-spacing:0.5px;">
+                  🏆 Lead Developer &amp; Systems Architect
+                </span>
+                <span
+                  style="font-size:0.75rem; font-weight:700; color:#10b981; background:#ecfdf5; border:1px solid #a7f3d0; padding:3px 10px; border-radius:999px;">
+                  Official Campus Portal Creator
+                </span>
+              </div>
+              <h3 class="dev-name"
+                style="font-size:1.35rem; font-weight:900; color:var(--text-main); margin-bottom:6px;">Parinitha.S</h3>
+              <p class="dev-bio"
+                style="font-size:0.9rem; margin-bottom:12px; color:var(--text-muted); line-height:1.5;">
+                Architected and developed the official <strong>Savitha Canteen</strong> platform. Engineered the digital
+                token ordering flow, zero-queue counter dispatch, and machine learning demand prediction to streamline
+                campus dining.
+              </p>
+              <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+                <a href="https://www.linkedin.com/in/pari-parinitha-s-6196b8354?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android"
+                  target="_blank" rel="noopener noreferrer" class="btn-linkedin"
+                  style="display:inline-flex; align-items:center; gap:8px; background:#0a66c2; color:#ffffff; padding:8px 18px; border-radius:8px; font-size:0.88rem; font-weight:700; text-decoration:none; transition:all 0.2s; box-shadow:0 2px 8px rgba(10, 102, 194, 0.3);">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64c-.87 0-1.58.7-1.58 1.58s.71 1.58 1.58 1.58 1.58-.71 1.58-1.58-.71-1.58-1.58-1.58Z" />
+                  </svg>
+                  <span>Connect on LinkedIn</span>
+                </a>
+                <span style="font-size:0.82rem; color:var(--text-muted);">View Official Profile &amp; Research</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================================
+           CAMPUS REVIEWS SECTION (STUDENTS & FACULTY)
+           ========================================================================= -->
+      <section id="reviews-section" class="reviews-section" style="padding-top:16px; padding-bottom:30px;">
+        <div class="section-badge-center">
+          <span>⭐ Campus Dining Reviews</span>
+        </div>
+        <h2 class="section-main-heading">What Students &amp; Faculty Say</h2>
+        <p class="section-sub-heading">Real dining experiences and feedback from the Savitha University campus
+          community.</p>
+
+        <!-- Clean Filter Chips for Reviews -->
+        <div style="display:flex; justify-content:center; gap:8px; margin-bottom:16px; flex-wrap:wrap;">
+          <button type="button" class="filter-chip active" onclick="filterReviews('all', this)"
+            style="padding:6px 14px; border-radius:999px; border:1.5px solid #c7d2fe; background:#eef2ff; color:var(--primary); font-weight:700; font-size:0.82rem; cursor:pointer;">
+            🌟 All Reviews
+          </button>
+          <button type="button" class="filter-chip" onclick="filterReviews('5', this)"
+            style="padding:6px 14px; border-radius:999px; border:1px solid var(--border); background:#ffffff; color:var(--text-muted); font-weight:700; font-size:0.82rem; cursor:pointer;">
+            ⭐⭐⭐⭐⭐ 5 Stars
+          </button>
+          <button type="button" class="filter-chip" onclick="filterReviews('4', this)"
+            style="padding:6px 14px; border-radius:999px; border:1px solid var(--border); background:#ffffff; color:var(--text-muted); font-weight:700; font-size:0.82rem; cursor:pointer;">
+            ⭐⭐⭐⭐ 4 Stars
+          </button>
+        </div>
+
+        <!-- Dynamic Reviews Cards Grid with Initial Verified Reviews -->
+        <div class="reviews-cards-grid" id="reviews-cards-grid"
+          style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:16px; margin-top:12px;">
+
+          <div class="fb-review-card animate-card"
+            style="background:#ffffff; border:1.5px solid var(--border); border-radius:14px; padding:18px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; justify-content:space-between; transition:transform 0.25s, box-shadow 0.25s;">
+            <div>
+              <div
+                style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; gap:8px;">
+                <div style="display:flex; align-items:center; gap:10px;">
+                  <div
+                    style="width:38px; height:38px; min-width:38px; border-radius:50%; background:linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%); color:var(--primary); font-weight:900; font-size:1rem; display:flex; align-items:center; justify-content:center; border:1.5px solid #c7d2fe;">
+                    S</div>
+                  <div>
+                    <div
+                      style="font-weight:800; font-size:0.96rem; color:var(--text-main); display:flex; align-items:center; gap:6px;">
+                      <span>Sneha Reddy</span>
+                      <span
+                        style="font-size:0.7rem; color:#10b981; background:#ecfdf5; border:1px solid #a7f3d0; padding:1px 6px; border-radius:999px; font-weight:700;">✓
+                        Verified</span>
+                    </div>
+                    <div style="font-size:0.78rem; font-weight:700; color:var(--primary); margin-top:2px;">🎓 Sem 4 •
+                      ECE</div>
+                  </div>
+                </div>
+                <div class="dish-stars-graphic"
+                  style="color:#f59e0b; font-size:1.1rem; letter-spacing:1px; white-space:nowrap;" title="5/5 stars">
+                  <span>★★★★★</span>
+                </div>
+              </div>
+              <p
+                style="font-size:0.88rem; color:var(--text-main); margin:0 0 12px 0; line-height:1.5; font-style:italic;">
+                "Brilliant website! The zero-wait token system saves so much time between lectures. Kudos to developer
+                Parinitha.S for creating this!"</p>
+            </div>
+            <div
+              style="display:flex; justify-content:space-between; align-items:center; font-size:0.75rem; color:var(--text-muted); border-top:1px solid #f1f5f9; padding-top:10px;">
+              <span style="background:#f1f5f9; padding:2px 8px; border-radius:6px; font-weight:600;">🏷️ Website
+                Experience</span>
+              <span style="font-weight:600;">📅 Recent</span>
+            </div>
+          </div>
+
+          <div class="fb-review-card animate-card"
+            style="background:#ffffff; border:1.5px solid var(--border); border-radius:14px; padding:18px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; justify-content:space-between; transition:transform 0.25s, box-shadow 0.25s;">
+            <div>
+              <div
+                style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; gap:8px;">
+                <div style="display:flex; align-items:center; gap:10px;">
+                  <div
+                    style="width:38px; height:38px; min-width:38px; border-radius:50%; background:linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%); color:var(--primary); font-weight:900; font-size:1rem; display:flex; align-items:center; justify-content:center; border:1.5px solid #c7d2fe;">
+                    D</div>
+                  <div>
+                    <div
+                      style="font-weight:800; font-size:0.96rem; color:var(--text-main); display:flex; align-items:center; gap:6px;">
+                      <span>Divya Krishnan</span>
+                      <span
+                        style="font-size:0.7rem; color:#10b981; background:#ecfdf5; border:1px solid #a7f3d0; padding:1px 6px; border-radius:999px; font-weight:700;">✓
+                        Verified</span>
+                    </div>
+                    <div style="font-size:0.78rem; font-weight:700; color:var(--primary); margin-top:2px;">🎓 Sem 8 •
+                      Final Year IT</div>
+                  </div>
+                </div>
+                <div class="dish-stars-graphic"
+                  style="color:#f59e0b; font-size:1.1rem; letter-spacing:1px; white-space:nowrap;" title="4/5 stars">
+                  <span>★★★★</span><span style="color:#cbd5e1;">☆</span>
+                </div>
+              </div>
+              <p
+                style="font-size:0.88rem; color:var(--text-main); margin:0 0 12px 0; line-height:1.5; font-style:italic;">
+                "Very clean, modern, and fast website! Ordering food takes under 15 seconds. The real-time token
+                tracking makes lunchtime so convenient."</p>
+            </div>
+            <div
+              style="display:flex; justify-content:space-between; align-items:center; font-size:0.75rem; color:var(--text-muted); border-top:1px solid #f1f5f9; padding-top:10px;">
+              <span style="background:#f1f5f9; padding:2px 8px; border-radius:6px; font-weight:600;">🏷️ Website
+                UI</span>
+              <span style="font-weight:600;">📅 Recent</span>
+            </div>
+          </div>
+
+          <div class="fb-review-card animate-card"
+            style="background:#ffffff; border:1.5px solid var(--border); border-radius:14px; padding:18px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; justify-content:space-between; transition:transform 0.25s, box-shadow 0.25s;">
+            <div>
+              <div
+                style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; gap:8px;">
+                <div style="display:flex; align-items:center; gap:10px;">
+                  <div
+                    style="width:38px; height:38px; min-width:38px; border-radius:50%; background:linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%); color:var(--primary); font-weight:900; font-size:1rem; display:flex; align-items:center; justify-content:center; border:1.5px solid #c7d2fe;">
+                    A</div>
+                  <div>
+                    <div
+                      style="font-weight:800; font-size:0.96rem; color:var(--text-main); display:flex; align-items:center; gap:6px;">
+                      <span>Aarav Menon</span>
+                      <span
+                        style="font-size:0.7rem; color:#10b981; background:#ecfdf5; border:1px solid #a7f3d0; padding:1px 6px; border-radius:999px; font-weight:700;">✓
+                        Verified</span>
+                    </div>
+                    <div style="font-size:0.78rem; font-weight:700; color:var(--primary); margin-top:2px;">🎓 Sem 6 •
+                      3rd Year CSE</div>
+                  </div>
+                </div>
+                <div class="dish-stars-graphic"
+                  style="color:#f59e0b; font-size:1.1rem; letter-spacing:1px; white-space:nowrap;" title="5/5 stars">
+                  <span>★★★★★</span>
+                </div>
+              </div>
+              <p
+                style="font-size:0.88rem; color:var(--text-main); margin:0 0 12px 0; line-height:1.5; font-style:italic;">
+                "The Veg Biryani and Paneer Thali taste authentic and fresh. Hot food right when token is called at the
+                counter!"</p>
+            </div>
+            <div
+              style="display:flex; justify-content:space-between; align-items:center; font-size:0.75rem; color:var(--text-muted); border-top:1px solid #f1f5f9; padding-top:10px;">
+              <span style="background:#f1f5f9; padding:2px 8px; border-radius:6px; font-weight:600;">🏷️ Food
+                Quality</span>
+              <span style="font-weight:600;">📅 Recent</span>
+            </div>
+          </div>
+
+          <div class="fb-review-card animate-card"
+            style="background:#ffffff; border:1.5px solid var(--border); border-radius:14px; padding:18px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; justify-content:space-between; transition:transform 0.25s, box-shadow 0.25s;">
+            <div>
+              <div
+                style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; gap:8px;">
+                <div style="display:flex; align-items:center; gap:10px;">
+                  <div
+                    style="width:38px; height:38px; min-width:38px; border-radius:50%; background:linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%); color:var(--primary); font-weight:900; font-size:1rem; display:flex; align-items:center; justify-content:center; border:1.5px solid #c7d2fe;">
+                    K</div>
+                  <div>
+                    <div
+                      style="font-weight:800; font-size:0.96rem; color:var(--text-main); display:flex; align-items:center; gap:6px;">
+                      <span>Karthik Raj</span>
+                      <span
+                        style="font-size:0.7rem; color:#10b981; background:#ecfdf5; border:1px solid #a7f3d0; padding:1px 6px; border-radius:999px; font-weight:700;">✓
+                        Verified</span>
+                    </div>
+                    <div style="font-size:0.78rem; font-weight:700; color:var(--primary); margin-top:2px;">🎓 Sem 8 •
+                      Mech</div>
+                  </div>
+                </div>
+                <div class="dish-stars-graphic"
+                  style="color:#f59e0b; font-size:1.1rem; letter-spacing:1px; white-space:nowrap;" title="5/5 stars">
+                  <span>★★★★★</span>
+                </div>
+              </div>
+              <p
+                style="font-size:0.88rem; color:var(--text-main); margin:0 0 12px 0; line-height:1.5; font-style:italic;">
+                "Zero-wait pickup is lightning fast! The AI portions ensure popular items do not run out during peak
+                rush hours."</p>
+            </div>
+            <div
+              style="display:flex; justify-content:space-between; align-items:center; font-size:0.75rem; color:var(--text-muted); border-top:1px solid #f1f5f9; padding-top:10px;">
+              <span style="background:#f1f5f9; padding:2px 8px; border-radius:6px; font-weight:600;">🏷️ Service
+                Speed</span>
+              <span style="font-weight:600;">📅 Recent</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Clean Action: Leave a Review -->
+        <div style="text-align:center; margin-top:22px;">
+          <button type="button" class="btn-hero-secondary" onclick="openAddReviewModal()"
+            style="padding:10px 24px; font-size:0.9rem; display:inline-flex; align-items:center; gap:8px; border-radius:999px; font-weight:700;">
+            <span>✍️</span> Leave Your Review
+          </button>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- =========================================================================
+         2. SIMPLE & CLEAN LOGIN PORTAL (STUDENT & KITCHEN STAFF)
+         ========================================================================= -->
+    <div id="view-login" class="login-screen-wrap" style="display:none;">
+      <div class="simple-login-card animate-pop"
+        style="max-width:440px; margin:24px auto; background:#ffffff; border:1.5px solid var(--border); border-radius:18px; padding:28px 24px; box-shadow:0 10px 30px rgba(0, 0, 0, 0.06);">
+
+        <!-- Back to About Navigation Button -->
+        <div style="text-align:left; margin-bottom:14px;">
+          <button type="button" class="btn-back-about" onclick="navigateToSection('about')"
+            style="background:transparent; border:none; color:var(--text-muted); font-size:0.88rem; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
+            <span>←</span> Back to About Website
+          </button>
+        </div>
+
+        <!-- Official Brand Header -->
+        <div class="simple-login-header" style="text-align:center; margin-bottom:20px;">
+          <img src="assets/logo.png" alt="Savitha Canteen Logo" class="login-brand-logo-img"
+            style="width:58px; height:58px; border-radius:14px; margin-bottom:8px; box-shadow:0 4px 14px rgba(79, 70, 229, 0.25);">
+          <h1 class="simple-login-title"
+            style="font-size:1.45rem; font-weight:900; color:var(--text-main); margin-bottom:2px;">Savitha Canteen</h1>
+          <p class="simple-login-subtitle" style="font-size:0.84rem; color:var(--text-muted); margin:0;">Official Campus
+            Dining &amp; Kitchen Portal</p>
+        </div>
+
+        <!-- Role Selector Tabs: Student vs Kitchen Staff -->
+        <div class="login-tabs-bar"
+          style="display:flex; gap:8px; margin-bottom:18px; border-bottom:1.5px solid var(--border); padding-bottom:12px;">
+          <button type="button" class="login-role-tab active" id="tab-login-student"
+            onclick="switchLoginRoleTab('student')"
+            style="flex:1; padding:10px 14px; border-radius:10px; border:none; font-weight:800; font-size:0.9rem; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px; background:#eef2ff; color:var(--primary); transition:all 0.2s;">
+            <span>🎓</span> Student Login
+          </button>
+          <button type="button" class="login-role-tab" id="tab-login-worker" onclick="switchLoginRoleTab('worker')"
+            style="flex:1; padding:10px 14px; border-radius:10px; border:none; font-weight:800; font-size:0.9rem; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px; background:#f1f5f9; color:var(--text-muted); transition:all 0.2s;">
+            <span>👨‍🍳</span> Kitchen Staff
+          </button>
+        </div>
+
+        <!-- Student Login Panel with User-Specific Account Support -->
+        <!-- Student Login Panel with Direct Name & Phone Access -->
+        <div id="login-panel-student" class="login-panel">
+
+          <!-- OFFICIAL STUDENT CANTEEN LOGIN FORM -->
+          <form id="student-signin-form" onsubmit="handlePortalStudentLogin(event); return false;" novalidate
+            class="simple-login-form">
+
+            <div class="simple-input-group" style="margin-bottom:14px; text-align:left;">
+              <label for="login-student-name" class="simple-label"
+                style="display:block; font-size:0.86rem; font-weight:700; margin-bottom:5px; color:var(--text-main);">
+                Student Full Name
+              </label>
+              <input type="text" id="login-student-name" class="simple-input"
+                placeholder="Enter your full name (e.g. Rahul Sharma)" autocomplete="name" required
+                style="width:100%; padding:11px 14px; border:1.5px solid var(--border); border-radius:10px; font-size:0.92rem; outline:none;"
+                onkeydown="if(event.key==='Enter'){handlePortalStudentLogin(event); return false;}">
+            </div>
+
+            <div class="simple-input-group" style="margin-bottom:14px; text-align:left;">
+              <label for="login-student-phone" class="simple-label"
+                style="display:block; font-size:0.86rem; font-weight:700; margin-bottom:5px; color:var(--text-main);">
+                Mobile Phone Number
+              </label>
+              <input type="tel" id="login-student-phone" class="simple-input" placeholder="10-digit mobile number"
+                maxlength="10" required autocomplete="tel"
+                style="width:100%; padding:11px 14px; border:1.5px solid var(--border); border-radius:10px; font-size:0.92rem; outline:none;"
+                onkeydown="if(event.key==='Enter'){handlePortalStudentLogin(event); return false;}">
+            </div>
+
+            <div class="simple-input-group" style="margin-bottom:18px; text-align:left;">
+              <label for="login-student-sem" class="simple-label"
+                style="display:block; font-size:0.86rem; font-weight:700; margin-bottom:5px; color:var(--text-main);">
+                Semester / Department
+              </label>
+              <select id="login-student-sem" class="simple-select"
+                style="width:100%; padding:11px 14px; border:1.5px solid var(--border); border-radius:10px; font-size:0.9rem; outline:none; background:#ffffff;">
+                <option value="Sem 1">Semester 1 (1st Year)</option>
+                <option value="Sem 2">Semester 2 (1st Year)</option>
+                <option value="Sem 3">Semester 3 (2nd Year)</option>
+                <option value="Sem 4">Semester 4 (2nd Year)</option>
+                <option value="Sem 5">Semester 5 (3rd Year)</option>
+                <option value="Sem 6" selected>Semester 6 (3rd Year)</option>
+                <option value="Sem 7">Semester 7 (Final Year)</option>
+                <option value="Sem 8">Semester 8 (Final Year)</option>
+                <option value="Faculty / Staff">Faculty / Staff</option>
+              </select>
+            </div>
+
+            <button type="button" class="btn-simple-submit btn-student-submit" id="btn-login-student-submit"
+              onclick="handlePortalStudentLogin(event)"
+              style="width:100%; padding:13px; font-size:1rem; font-weight:800; background:linear-gradient(135deg, #4f46e5 0%, #6366f1 100%); color:#ffffff; border:none; border-radius:12px; cursor:pointer; box-shadow:0 4px 14px rgba(79, 70, 229, 0.3); display:flex; align-items:center; justify-content:center; gap:8px;">
+              <span>🎓</span> Enter Canteen &amp; Order
+            </button>
+
+            <div
+              style="text-align:center; margin-top:14px; font-size:0.82rem; color:var(--text-muted); line-height:1.4;">
+              🔒 <strong>Private &amp; Secure:</strong> Login simply with your Name and Phone. All orders and tokens are
+              isolated to your account.
+            </div>
+          </form>
+
+          <div class="login-card-footer"
+            style="text-align:center; margin-top:18px; border-top:1px solid var(--border); padding-top:14px;">
+            <button type="button" class="btn-guest-link" onclick="navigateToSection('about')"
+              style="background:transparent; border:none; color:var(--text-muted); font-size:0.84rem; cursor:pointer;">
+              <span>←</span> Back to About Website
+            </button>
+          </div>
+        </div>
+
+        <!-- Kitchen Staff Login Panel -->
+        <div id="login-panel-worker" class="login-panel" style="display:none;">
+          <form id="worker-portal-form" onsubmit="handlePortalWorkerLogin(event); return false;" novalidate
+            class="simple-login-form">
+            <div class="simple-input-group" style="margin-bottom:16px; text-align:left;">
+              <label for="login-worker-password" class="simple-label"
+                style="display:block; font-size:0.82rem; font-weight:700; margin-bottom:4px; color:var(--text-main);">Kitchen
+                Staff Password</label>
+              <div class="password-input-wrap">
+                <input type="password" id="login-worker-password" class="simple-input"
+                  placeholder="Enter staff password" autocomplete="current-password" required
+                  style="width:100%; padding:10px 12px; border:1.5px solid var(--border); border-radius:10px; font-size:0.92rem; outline:none;"
+                  onkeydown="if(event.key==='Enter'){handlePortalWorkerLogin(event); return false;}">
+              </div>
+            </div>
+
+            <button type="button" class="btn-simple-submit btn-worker-submit" onclick="handlePortalWorkerLogin(event)"
+              style="width:100%; padding:13px; font-size:1rem; font-weight:800; background:linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color:#ffffff; border:none; border-radius:12px; cursor:pointer; box-shadow:0 4px 14px rgba(2, 132, 199, 0.3); display:flex; align-items:center; justify-content:center; gap:8px;">
+              <span>🔓</span> Enter Kitchen Dashboard
+            </button>
+          </form>
+
+          <div class="login-card-footer"
+            style="text-align:center; margin-top:16px; border-top:1px solid var(--border); padding-top:12px;">
+            <button type="button" class="btn-guest-link" onclick="switchLoginRoleTab('student')"
+              style="background:transparent; border:none; color:var(--text-muted); font-size:0.84rem; cursor:pointer;">
+              <span>←</span> Back to Student Login
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="view-order" style="display:none;">
+
+      <!-- Compatibility triggers for order modals (hidden from UI for official look) -->
+      <div id="student-menu-top-bar" style="display:none;" aria-hidden="true">
+        <button type="button" id="btn-menu-top-my-orders" onclick="openMyOrdersModal()"><span
+            id="menu-my-orders-count">0</span></button>
+        <button type="button" id="btn-hero-order-now" onclick="openCartModal()"><span
+            id="hero-cart-count">0</span></button>
+      </div>
+
+      <!-- =====================================================================
+           SIMPLE & ELEGANT OFFERS BAR (TODAY'S SPECIAL ₹99 + 10TH ORDER FREE DEAL)
+           ===================================================================== -->
+      <div class="simple-offers-grid"
+        style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:12px; margin-bottom:16px;">
+        <!-- Card 1: Today's Special at Flat ₹99 -->
+        <div class="simple-offer-card special-deal-card" id="special-deal-banner"
+          style="background:linear-gradient(135deg, #fffbeb 0%, #fef3c7 60%, #ede9fe 100%); border:1.5px solid #f59e0b; border-radius:14px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center; gap:12px; box-shadow:0 4px 14px rgba(245, 158, 11, 0.12);">
+          <div style="flex:1;">
+            <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
+              <span
+                style="background:#ea580c; color:#fff; font-size:0.68rem; font-weight:800; padding:2px 8px; border-radius:999px; text-transform:uppercase;">🔥
+                Today's Special</span>
+              <span
+                style="font-size:0.75rem; color:#15803d; font-weight:800; background:#dcfce7; padding:2px 6px; border-radius:4px;">Save
+                34%</span>
+            </div>
+            <div style="font-size:0.95rem; font-weight:900; color:#1e1b4b; line-height:1.2;">Royal Dum Biryani Combo
+            </div>
+            <div style="font-size:0.76rem; color:#64748b; margin:2px 0 6px 0;">Biryani Bowl + Pakoda + Chilled Lime Soda
+            </div>
+            <div style="display:flex; align-items:baseline; gap:8px;">
+              <span style="font-size:1.35rem; font-weight:900; color:#ea580c;">₹99</span>
+              <span style="font-size:0.85rem; color:#94a3b8; text-decoration:line-through; font-weight:700;">₹149</span>
+              <button type="button" class="btn-add-special" id="btn-add-special-deal" onclick="addTodaysSpecialToCart()"
+                style="padding:6px 14px; font-size:0.82rem; margin-left:auto;">
+                <span>🛒</span> Add @ ₹99
+              </button>
+            </div>
+          </div>
+          <div
+            style="width:72px; height:72px; min-width:72px; border-radius:12px; overflow:hidden; border:2px solid #ffffff; box-shadow:0 3px 10px rgba(0,0,0,0.1);">
+            <img src="assets/veg_biryani.jpg" alt="Today's Special Biryani Combo for ₹99"
+              style="width:100%; height:100%; object-fit:cover;">
+          </div>
+        </div>
+
+        <!-- Card 2: 10th Order Free Loyalty Card & Quick Coupons -->
+        <div class="simple-offer-card loyalty-deal-card" id="loyalty-rewards-card"
+          style="background:linear-gradient(135deg, #f8faff 0%, #eef2ff 100%); border:1.5px solid #c7d2fe; border-radius:14px; padding:12px 16px; display:flex; flex-direction:column; justify-content:space-between; gap:8px; box-shadow:var(--shadow-sm);">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div style="display:flex; align-items:center; gap:6px;">
+              <span style="font-size:1.2rem;">🎟️</span>
+              <div>
+                <span style="font-size:0.88rem; font-weight:800; color:var(--text-main);">10th Order: Free Drink or
+                  Snack! ☕</span>
+                <span
+                  style="font-size:0.72rem; color:var(--primary); font-weight:700; background:#e0e7ff; padding:1px 6px; border-radius:4px; margin-left:4px;">CODE:
+                  FREE10</span>
+              </div>
+            </div>
+            <button type="button" class="btn-demo-stamp" onclick="simulateOrderStreak()"
+              title="Test 10th order free coupon immediately" style="padding:3px 8px; font-size:0.72rem;">
+              ⚡ Try 10th Free
+            </button>
+          </div>
+
+          <!-- Compact Stamp Progress -->
+          <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:6px 10px;">
+            <div style="display:flex; justify-content:space-between; font-size:0.76rem; margin-bottom:4px;">
+              <span id="stamp-progress-text"><strong>0 / 10</strong> Orders Placed</span>
+              <span id="stamp-reward-hint" style="color:var(--primary); font-weight:700;">10 orders to Free Small Item
+                (Drink/Snack) ☕</span>
+            </div>
+            <div class="stamp-progress-bar-wrap" style="height:6px; margin:0; background:#e2e8f0; border-radius:999px;">
+              <div class="stamp-progress-fill" id="stamp-progress-fill"
+                style="width:0%; height:100%; border-radius:999px; background:linear-gradient(90deg, #6366f1 0%, #10b981 100%);">
+              </div>
+            </div>
+            <div id="stamp-track" style="display:none;"></div>
+            <div id="loyalty-badge-text" style="display:none;"></div>
+          </div>
+
+          <!-- Fair Canteen Coupon & Reward Policy Notice -->
+          <div style="padding-top:4px;">
+            <div
+              style="font-size:0.76rem; color:var(--text-muted); display:flex; align-items:center; gap:5px; flex-wrap:wrap; line-height:1.4;">
+              <span>💡 <strong>Canteen Reward Policy:</strong> 10th order unlocks a Free Small Item (Beverage/Snack up
+                to ₹35). Promo coupons are earned on lucky orders &amp; milestones (limit 1 coupon redemption per
+                day).</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Clean Category Filter Bar -->
+      <div class="category-bar">
+        <button type="button" class="category-pill active" onclick="filterCategory('all', this)">🌟 All Dishes</button>
+        <button type="button" class="category-pill" onclick="filterCategory('lunch', this)">🍛 Lunch &amp;
+          Meals</button>
+        <button type="button" class="category-pill" onclick="filterCategory('breakfast', this)">🥞 Breakfast</button>
+        <button type="button" class="category-pill" onclick="filterCategory('snacks', this)">☕ Snacks &amp;
+          Drinks</button>
+      </div>
+
+      <!-- Dishes Grid -->
+      <div class="dishes-grid" id="dishes-grid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+      <!-- Quick Back to About Link -->
+      <div style="text-align:center; margin:24px 0 16px 0;">
+        <button type="button" class="btn-hero-secondary" onclick="navigateToSection('about')"
+          style="display:inline-flex;">
+          <span>📖</span> Learn More About Savitha Canteen &amp; Developer Parinitha.S
+        </button>
+      </div>
+
+
+
+    </div>
+
+
+
+    <!-- =========================================================================
+
+         4. SIMPLE CANTEEN KITCHEN DASHBOARD
+
+         ========================================================================= -->
+
+    <div id="view-manager" class="manager-section">
+
+
+
+      <!-- Manager Navigation Tabs (Simple 2 Tabs) -->
+
+      <div
+        style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; flex-wrap:wrap; gap:12px; border-bottom:1px solid var(--border); padding-bottom:12px;">
+
+        <div>
+
+          <h1 style="font-size:1.5rem; font-weight:800; color:var(--text-main); margin:0;">Kitchen Staff Dashboard</h1>
+
+          <p style="color:var(--text-muted); font-size:0.88rem; margin:2px 0 0 0;">Manage live student orders and daily
+            AI cooking portions.</p>
+
+        </div>
+
+
+
+        <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+
+          <button type="button" class="clickable-pill" onclick="navigateToSection('about')" title="Back to About">
+
+            📖 About
+
+          </button>
+
+          <button type="button" class="clickable-pill active" id="subtab-orders-btn"
+            onclick="switchManagerTab('orders')" style="position:relative;">
+
+            🔔 Live Orders <span id="live-order-badge"
+              style="background:var(--primary); color:#ffffff; font-size:0.75rem; font-weight:800; padding:2px 7px; border-radius:999px; margin-left:4px;">0</span>
+
+          </button>
+
+          <button type="button" class="clickable-pill" id="subtab-inventory-btn"
+            onclick="switchManagerTab('inventory')">
+            📦 Inventory &amp; Stock <span id="inv-low-stock-badge"
+              style="display:none; background:#ef4444; color:#ffffff; font-size:0.75rem; font-weight:800; padding:2px 7px; border-radius:999px; margin-left:4px;">0</span>
+          </button>
+
+          <button type="button" class="clickable-pill" id="subtab-calc-btn" onclick="switchManagerTab('calc')">🍲 Daily
+            Cooking Portions</button>
+
+          <button type="button" class="clickable-pill" id="subtab-pnl-btn" onclick="switchManagerTab('pnl')">💰 Profit
+            &amp; Loss (Weekly)</button>
+
+          <button type="button" class="clickable-pill" id="subtab-pwd-btn" onclick="switchManagerTab('pwd')">🔐 Staff
+            Password</button>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Tab 1: Live Incoming Student Orders -->
+
+      <div id="manager-pane-orders">
+
+        <!-- Quick Token Verification -->
+
+        <div class="manager-card"
+          style="margin-bottom:16px; background:linear-gradient(135deg, #f5f3ff 0%, #eef2ff 100%); border:1.5px solid #c7d2fe;">
+
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+
+            <div>
+
+              <h3 style="font-size:1.05rem; font-weight:800; color:#312e81; margin:0;">🎫 Quick Token Handover</h3>
+
+              <p style="font-size:0.82rem; color:#4f46e5; margin:2px 0 0 0;">Confirm student token number and hand over
+                food.</p>
+
+            </div>
+
+            <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+
+              <input type="text" id="mgr-token-search-input" placeholder="Enter Token (e.g. A-14)"
+                style="padding:8px 12px; border-radius:8px; border:1.5px solid #a5b4fc; font-weight:700; font-size:0.9rem; outline:none; text-transform:uppercase; max-width:180px;"
+                onkeydown="if(event.key==='Enter') confirmTokenInKitchen()">
+
+              <button type="button" class="btn-calc" onclick="confirmTokenInKitchen()"
+                style="background:#4f46e5; padding:8px 16px; font-size:0.88rem;">
+
+                <span>✓</span> Hand Over
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="manager-card">
+
+          <div
+            style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; flex-wrap:wrap; gap:10px;">
+
+            <div>
+
+              <h2 style="font-size:1.2rem; font-weight:800; color:var(--text-main); margin:0;">Live Orders Feed</h2>
+
+              <p style="font-size:0.84rem; color:var(--text-muted); margin:2px 0 0 0;">When students order, new tickets
+                appear here instantly.</p>
+
+            </div>
+
+            <div style="display:flex; gap:6px;">
+
+              <button type="button" class="clickable-pill active" id="order-filter-all"
+                onclick="filterLiveOrders('all', this)">All</button>
+
+              <button type="button" class="clickable-pill" id="order-filter-prep"
+                onclick="filterLiveOrders('prep', this)">⏳ Prep</button>
+
+              <button type="button" class="clickable-pill" id="order-filter-ready"
+                onclick="filterLiveOrders('ready', this)">✅ Ready</button>
+
+              <button type="button" class="clickable-pill" style="color:#e11d48;" onclick="clearAllLiveOrders()"
+                title="Clear orders">🗑️ Clear</button>
+
+            </div>
+
+          </div>
+
+
+
+          <div id="live-orders-container" class="live-orders-grid">
+
+            <!-- Populated dynamically by app.js -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Tab 2: Cooking Portions & AI Estimation -->
+
+      <!-- Tab: Kitchen Inventory & Stock Monitoring -->
+      <div id="manager-pane-inventory" style="display:none;">
+        <!-- Top Metrics Cards -->
+        <div
+          style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px; margin-bottom:16px;">
+          <div class="manager-card"
+            style="padding:14px 16px; border-left:4px solid var(--primary); background:#ffffff;">
+            <div style="font-size:0.78rem; font-weight:800; color:var(--text-muted); text-transform:uppercase;">📦 Total
+              Items</div>
+            <div id="inv-stat-total" style="font-size:1.8rem; font-weight:900; color:var(--text-main); margin-top:4px;">
+              24</div>
+            <div style="font-size:0.75rem; color:var(--text-muted);">Active dishes on menu</div>
+          </div>
+          <div class="manager-card" style="padding:14px 16px; border-left:4px solid #10b981; background:#ffffff;">
+            <div style="font-size:0.78rem; font-weight:800; color:#059669; text-transform:uppercase;">🟢 In Stock &amp;
+              Available</div>
+            <div id="inv-stat-instock" style="font-size:1.8rem; font-weight:900; color:#059669; margin-top:4px;">24
+            </div>
+            <div style="font-size:0.75rem; color:var(--text-muted);">Ready to serve students</div>
+          </div>
+          <div class="manager-card" style="padding:14px 16px; border-left:4px solid #f59e0b; background:#ffffff;">
+            <div style="font-size:0.78rem; font-weight:800; color:#d97706; text-transform:uppercase;">🟡 Low Stock Alert
+            </div>
+            <div id="inv-stat-lowstock" style="font-size:1.8rem; font-weight:900; color:#d97706; margin-top:4px;">0
+            </div>
+            <div style="font-size:0.75rem; color:var(--text-muted);">&lt; 10 portions remaining</div>
+          </div>
+          <div class="manager-card" style="padding:14px 16px; border-left:4px solid #ef4444; background:#ffffff;">
+            <div style="font-size:0.78rem; font-weight:800; color:#dc2626; text-transform:uppercase;">🔴 Sold Out /
+              Depleted</div>
+            <div id="inv-stat-soldout" style="font-size:1.8rem; font-weight:900; color:#dc2626; margin-top:4px;">0</div>
+            <div style="font-size:0.75rem; color:var(--text-muted);">Blocked on student menu</div>
+          </div>
+        </div>
+
+        <!-- Low Stock Warning Alert Banner -->
+        <div id="inv-warning-banner"
+          style="display:none; background:#fffbeb; border:1.5px solid #fde68a; border-radius:12px; padding:12px 16px; margin-bottom:16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="font-size:1.3rem;">⚠️</span>
+              <div>
+                <strong style="color:#b45309; font-size:0.92rem;">Kitchen Inventory Alert</strong>
+                <p id="inv-warning-text" style="color:#92400e; font-size:0.82rem; margin:2px 0 0 0;">Some items are
+                  running low on prepared stock.</p>
+              </div>
+            </div>
+            <button type="button" class="btn-calc" onclick="restockAll(20)"
+              style="padding:6px 14px; font-size:0.82rem; background:#d97706;">
+              ⚡ Restock All (+20 Portions)
+            </button>
+          </div>
+        </div>
+
+        <!-- Controls Toolbar -->
+        <div class="manager-card" style="margin-bottom:16px; padding:14px 16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+            <!-- Search -->
+            <div style="flex:1; min-width:220px;">
+              <input type="text" id="inv-search-input" placeholder="🔍 Search item name (e.g. Biryani, Dosa, Chai)..."
+                oninput="searchInventory(this.value)"
+                style="width:100%; padding:9px 12px; border:1.5px solid var(--border); border-radius:8px; font-size:0.88rem; outline:none;">
+            </div>
+            <!-- Category and Status filter pills -->
+            <div style="display:flex; gap:6px; flex-wrap:wrap; align-items:center;">
+              <button type="button" class="clickable-pill active inv-filter-pill"
+                onclick="filterInventoryCategory('all', this)" style="font-size:0.78rem; padding:5px 10px;">All</button>
+              <button type="button" class="clickable-pill inv-filter-pill"
+                onclick="filterInventoryCategory('lunch', this)" style="font-size:0.78rem; padding:5px 10px;">🍛
+                Lunch</button>
+              <button type="button" class="clickable-pill inv-filter-pill"
+                onclick="filterInventoryCategory('breakfast', this)" style="font-size:0.78rem; padding:5px 10px;">🥞
+                Breakfast</button>
+              <button type="button" class="clickable-pill inv-filter-pill"
+                onclick="filterInventoryCategory('snacks', this)" style="font-size:0.78rem; padding:5px 10px;">☕
+                Snacks</button>
+              <button type="button" class="clickable-pill inv-filter-pill"
+                onclick="filterInventoryStatus('low_stock', this)"
+                style="font-size:0.78rem; padding:5px 10px; color:#d97706;">🟡 Low Stock</button>
+              <button type="button" class="clickable-pill inv-filter-pill"
+                onclick="filterInventoryStatus('out_of_stock', this)"
+                style="font-size:0.78rem; padding:5px 10px; color:#dc2626;">🔴 Sold Out</button>
+              <button type="button" class="btn-calc" onclick="restockAll(25)"
+                style="font-size:0.78rem; padding:5px 12px; background:var(--primary); margin-left:4px;">⚡ Restock All
+                (+25)</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inventory List / Table -->
+        <div class="manager-card" style="padding:0; overflow:hidden;">
+          <div
+            style="padding:14px 18px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <h3 style="font-size:1.05rem; font-weight:800; color:var(--text-main); margin:0;">Live Item Stock &amp;
+                Portions Monitoring</h3>
+              <p style="font-size:0.8rem; color:var(--text-muted); margin:2px 0 0 0;">Adjust portions in real time.
+                Items marked Sold Out will automatically be blocked on student menus.</p>
+            </div>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="pnl-table" style="width:100%; border-collapse:collapse; min-width:680px;">
+              <thead>
+                <tr style="background:#f8fafc; border-bottom:1.5px solid var(--border); text-align:left;">
+                  <th style="padding:12px 16px;">Dish / Food Item</th>
+                  <th style="padding:12px 14px;">Category</th>
+                  <th style="padding:12px 14px;">Price</th>
+                  <th style="padding:12px 14px; text-align:center;">Current Stock (Portions)</th>
+                  <th style="padding:12px 14px;">Status</th>
+                  <th style="padding:12px 16px; text-align:right;">Actions / Toggle</th>
+                </tr>
+              </thead>
+              <tbody id="inventory-table-body">
+                <!-- Populated dynamically by app.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="manager-pane-calc" style="display:none;">
+
+        <div class="manager-card" style="margin-bottom:20px;">
+
+          <div
+            style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+
+            <div>
+
+              <h2 style="font-size:1.15rem; font-weight:800; color:var(--text-main); margin:0;">Tap a Dish to Check
+                Cooking Portions</h2>
+
+              <p style="font-size:0.84rem; color:var(--text-muted); margin-top:2px;">Select any dish to see today's
+                recommended portions with safety buffer.</p>
+
+            </div>
+
+            <span id="selected-dish-display"
+              style="background:#eef2ff; border:1px solid #c7d2fe; color:#4338ca; font-size:0.86rem; font-weight:800; padding:5px 12px; border-radius:999px;">
+
+              🍛 Selected: Veg Biryani
+
+            </span>
+
+          </div>
+
+
+
+          <!-- Dish Selector Grid -->
+
+          <div class="dish-selector-grid" id="quick-dish-selector">
+
+            <button type="button" class="dish-select-btn active" onclick="selectKitchenDish('Veg Biryani', this)">
+              <span class="dish-icon">🍛</span>
+              <span class="dish-name-label">Veg Biryani</span>
+              <span class="dish-base-hint">Avg: ~140</span>
+            </button>
+
+            <button type="button" class="dish-select-btn" onclick="selectKitchenDish('Chicken Biryani', this)">
+              <span class="dish-icon">🍗</span>
+              <span class="dish-name-label">Chicken Biryani</span>
+              <span class="dish-base-hint">Avg: ~175</span>
+            </button>
+
+            <button type="button" class="dish-select-btn" onclick="selectKitchenDish('Masala Dosa', this)">
+              <span class="dish-icon">🥞</span>
+              <span class="dish-name-label">Masala Dosa</span>
+              <span class="dish-base-hint">Avg: ~125</span>
+            </button>
+
+            <button type="button" class="dish-select-btn" onclick="selectKitchenDish('Idli Vada Combo', this)">
+              <span class="dish-icon">🥞</span>
+              <span class="dish-name-label">Idli Vada</span>
+              <span class="dish-base-hint">Avg: ~135</span>
+            </button>
+
+            <button type="button" class="dish-select-btn" onclick="selectKitchenDish('Golden Puri Bhaji', this)">
+              <span class="dish-icon">🥞</span>
+              <span class="dish-name-label">Puri Bhaji</span>
+              <span class="dish-base-hint">Avg: ~130</span>
+            </button>
+
+            <button type="button" class="dish-select-btn" onclick="selectKitchenDish('Paneer Thali', this)">
+              <span class="dish-icon">🥘</span>
+              <span class="dish-name-label">Paneer Thali</span>
+              <span class="dish-base-hint">Avg: ~110</span>
+            </button>
+
+            <button type="button" class="dish-select-btn"
+              onclick="selectKitchenDish('Paneer Butter Masala & Roti', this)">
+              <span class="dish-icon">🥘</span>
+              <span class="dish-name-label">Paneer Roti</span>
+              <span class="dish-base-hint">Avg: ~125</span>
+            </button>
+
+            <button type="button" class="dish-select-btn" onclick="selectKitchenDish('Chole Bhature', this)">
+              <span class="dish-icon">🍛</span>
+              <span class="dish-name-label">Chole Bhature</span>
+              <span class="dish-base-hint">Avg: ~130</span>
+            </button>
+
+            <button type="button" class="dish-select-btn" onclick="selectKitchenDish('South Indian Curd Rice', this)">
+              <span class="dish-icon">🌿</span>
+              <span class="dish-name-label">Curd Rice</span>
+              <span class="dish-base-hint">Avg: ~105</span>
+            </button>
+
+            <button type="button" class="dish-select-btn" onclick="selectKitchenDish('Veg Fried Rice', this)">
+              <span class="dish-icon">🍚</span>
+              <span class="dish-name-label">Fried Rice</span>
+              <span class="dish-base-hint">Avg: ~115</span>
+            </button>
+
+            <button type="button" class="dish-select-btn" onclick="selectKitchenDish('Egg Fried Rice', this)">
+              <span class="dish-icon">🍳</span>
+              <span class="dish-name-label">Egg Rice</span>
+              <span class="dish-base-hint">Avg: ~120</span>
+            </button>
+
+            <button type="button" class="dish-select-btn" onclick="selectKitchenDish('Veg Hakka Noodles', this)">
+              <span class="dish-icon">🍜</span>
+              <span class="dish-name-label">Hakka Noodles</span>
+              <span class="dish-base-hint">Avg: ~145</span>
+            </button>
+
+            <button type="button" class="dish-select-btn" onclick="selectKitchenDish('Chicken Kathi Roll', this)">
+              <span class="dish-icon">🌯</span>
+              <span class="dish-name-label">Chicken Roll</span>
+              <span class="dish-base-hint">Avg: ~140</span>
+            </button>
+
+            <button type="button" class="dish-select-btn" onclick="selectKitchenDish('Paneer Tikka Kathi Roll', this)">
+              <span class="dish-icon">🌯</span>
+              <span class="dish-name-label">Paneer Roll</span>
+              <span class="dish-base-hint">Avg: ~125</span>
+            </button>
+
+            <button type="button" class="dish-select-btn" onclick="selectKitchenDish('Mumbai Pav Bhaji', this)">
+              <span class="dish-icon">🍲</span>
+              <span class="dish-name-label">Pav Bhaji</span>
+              <span class="dish-base-hint">Avg: ~150</span>
+            </button>
+
+            <button type="button" class="dish-select-btn" onclick="selectKitchenDish('Samosa & Cutting Chai', this)">
+              <span class="dish-icon">☕</span>
+              <span class="dish-name-label">Samosa &amp; Chai</span>
+              <span class="dish-base-hint">Avg: ~220</span>
+            </button>
+
+            <button type="button" class="dish-select-btn" onclick="selectKitchenDish('Crispy Onion Pakoda', this)">
+              <span class="dish-icon">🧅</span>
+              <span class="dish-name-label">Onion Pakoda</span>
+              <span class="dish-base-hint">Avg: ~160</span>
+            </button>
+
+            <button type="button" class="dish-select-btn" onclick="selectKitchenDish('Cheese Masala Maggi', this)">
+              <span class="dish-icon">🍜</span>
+              <span class="dish-name-label">Cheese Maggi</span>
+              <span class="dish-base-hint">Avg: ~165</span>
+            </button>
+
+            <button type="button" class="dish-select-btn" onclick="selectKitchenDish('Grilled Cheese Sandwich', this)">
+              <span class="dish-icon">🥪</span>
+              <span class="dish-name-label">Sandwich</span>
+              <span class="dish-base-hint">Avg: ~95</span>
+            </button>
+
+            <button type="button" class="dish-select-btn" onclick="selectKitchenDish('Thick Cold Coffee', this)">
+              <span class="dish-icon">🥤</span>
+              <span class="dish-name-label">Cold Coffee</span>
+              <span class="dish-base-hint">Avg: ~120</span>
+            </button>
+
+            <button type="button" class="dish-select-btn" onclick="selectKitchenDish('Royal Mango Lassi', this)">
+              <span class="dish-icon">🥭</span>
+              <span class="dish-name-label">Mango Lassi</span>
+              <span class="dish-base-hint">Avg: ~90</span>
+            </button>
+
+            <button type="button" class="dish-select-btn"
+              onclick="selectKitchenDish('Fresh Sparkling Lime Soda', this)">
+              <span class="dish-icon">🍋</span>
+              <span class="dish-name-label">Lime Soda</span>
+              <span class="dish-base-hint">Avg: ~85</span>
+            </button>
+
+            <button type="button" class="dish-select-btn" onclick="selectKitchenDish('Hot Gulab Jamun', this)">
+              <span class="dish-icon">🍯</span>
+              <span class="dish-name-label">Gulab Jamun</span>
+              <span class="dish-base-hint">Avg: ~180</span>
+            </button>
+
+            <button type="button" class="dish-select-btn" onclick="selectKitchenDish('Brownie with Ice Cream', this)">
+              <span class="dish-icon">🍫</span>
+              <span class="dish-name-label">Brownie</span>
+              <span class="dish-base-hint">Avg: ~95</span>
+            </button>
+
+          </div>
+
+
+
+          <!-- Portions Result Box -->
+
+          <div style="margin-top:16px;">
+
+            <div id="kitchen-prediction-result">
+
+              <div class="result-highlight-box"
+                style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+
+                <div>
+
+                  <div style="font-size:0.8rem; font-weight:700; text-transform:uppercase; color:#4f46e5;">Recommended
+                    Cooking Quantity</div>
+
+                  <div id="kitchen-recommended-portions"
+                    style="font-size:2.4rem; font-weight:900; color:#312e81; line-height:1.1;">210 Portions</div>
+
+                  <div id="kitchen-recommendation-note" style="font-size:0.84rem; color:#4b5563; margin-top:4px;">
+                    Includes +10% safety buffer to prevent stockouts.</div>
+
+                </div>
+
+                <button type="button" class="btn-calc" onclick="runEasyKitchenPrediction()"
+                  style="padding:10px 20px; font-size:0.92rem;">
+
+                  <span>⚡</span> Recalculate AI Prediction
+
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Tab 3: Staff Password -->
+
+      <div id="manager-pane-pwd" style="display:none;">
+
+        <div class="manager-card" style="max-width:500px; margin:0 auto;">
+
+          <h2 style="font-size:1.2rem; font-weight:800; color:var(--text-main); margin-bottom:12px;">Staff Password
+            Settings</h2>
+
+          <form onsubmit="handleStaffPasswordChange(event)">
+
+            <div class="simple-input-group">
+
+              <label for="current-pwd-input" class="simple-label">Current Password</label>
+
+              <input type="password" id="current-pwd-input" class="simple-input" placeholder="Enter current password"
+                required>
+
+            </div>
+
+            <div class="simple-input-group">
+
+              <label for="new-pwd-input" class="simple-label">New Password</label>
+
+              <input type="password" id="new-pwd-input" class="simple-input" placeholder="Enter new password" required>
+
+            </div>
+
+            <button type="submit" class="btn-calc" style="width:100%; margin-top:8px;">
+
+              <span>💾</span> Update Password
+
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+      <!-- Tab 4: Profit & Loss (P&L) and Weekly Comparison -->
+      <div id="manager-pane-pnl" style="display:none;">
+
+        <!-- P&L Header & Controls Card -->
+        <div class="manager-card"
+          style="margin-bottom:16px; background:linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); border:1.5px solid var(--border);">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+            <div>
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span style="font-size:1.4rem;">💰</span>
+                <h2 style="font-size:1.25rem; font-weight:900; color:var(--text-main); margin:0;">Canteen Profit &amp;
+                  Loss (P&amp;L) Analysis</h2>
+                <span
+                  style="background:#dcfce7; color:#15803d; font-size:0.75rem; font-weight:800; padding:2px 8px; border-radius:999px;">September
+                  2026</span>
+              </div>
+              <p style="font-size:0.84rem; color:var(--text-muted); margin:4px 0 0 0;">
+                Cafeteria gross sales revenue, raw material costs (COGS), kitchen utilities, and week-over-week net
+                margin comparison.
+              </p>
+            </div>
+
+            <!-- Action Controls -->
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+              <button type="button" class="btn-calc" onclick="loadAndRenderPnL()"
+                style="background:#4f46e5; padding:8px 14px; font-size:0.84rem;">
+                <span>🔄</span> Refresh Data
+              </button>
+              <button type="button" class="btn-calc" onclick="exportPnLReport()"
+                style="background:#0284c7; padding:8px 14px; font-size:0.84rem;">
+                <span>🖨️</span> Print / Export Report
+              </button>
+            </div>
+          </div>
+
+          <!-- Week Filter Selector Pills -->
+          <div
+            style="margin-top:14px; padding-top:12px; border-top:1px solid #e2e8f0; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+            <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
+              <span style="font-size:0.8rem; font-weight:800; color:var(--text-muted); margin-right:4px;">SELECT
+                WEEK:</span>
+              <button type="button" class="pnl-week-chip active" id="pnl-chip-week4"
+                onclick="selectPnLWeek('week4', this)"
+                style="padding:5px 12px; border-radius:999px; border:1.5px solid #4f46e5; background:#4f46e5; color:#ffffff; font-weight:800; font-size:0.8rem; cursor:pointer;">
+                🔥 Week 4 (Current • Sep 21 - 27)
+              </button>
+              <button type="button" class="pnl-week-chip" id="pnl-chip-week3" onclick="selectPnLWeek('week3', this)"
+                style="padding:5px 12px; border-radius:999px; border:1px solid var(--border); background:#ffffff; color:var(--text-main); font-weight:700; font-size:0.8rem; cursor:pointer;">
+                📅 Week 3 (Sep 14 - 20)
+              </button>
+              <button type="button" class="pnl-week-chip" id="pnl-chip-week2" onclick="selectPnLWeek('week2', this)"
+                style="padding:5px 12px; border-radius:999px; border:1px solid var(--border); background:#ffffff; color:var(--text-main); font-weight:700; font-size:0.8rem; cursor:pointer;">
+                📅 Week 2 (Sep 07 - 13)
+              </button>
+              <button type="button" class="pnl-week-chip" id="pnl-chip-week1" onclick="selectPnLWeek('week1', this)"
+                style="padding:5px 12px; border-radius:999px; border:1px solid var(--border); background:#ffffff; color:var(--text-main); font-weight:700; font-size:0.8rem; cursor:pointer;">
+                📅 Week 1 (Aug 31 - Sep 06)
+              </button>
+              <button type="button" class="pnl-week-chip" id="pnl-chip-all" onclick="selectPnLWeek('all', this)"
+                style="padding:5px 12px; border-radius:999px; border:1px solid var(--border); background:#ffffff; color:var(--text-main); font-weight:700; font-size:0.8rem; cursor:pointer;">
+                📊 Full Month Overview
+              </button>
+            </div>
+
+            <div id="pnl-selected-week-badge"
+              style="font-size:0.8rem; font-weight:800; color:#4338ca; background:#e0e7ff; padding:3px 10px; border-radius:999px;">
+              Viewing: Week 4 (Current)
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Real-time Highlight Stat Cards -->
+        <div class="pnl-stats-grid"
+          style="display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:14px; margin-bottom:16px;">
+          <!-- Card 1: Gross Revenue -->
+          <div class="manager-card pnl-metric-card" style="border-top:4px solid #4f46e5; padding:16px;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+              <div>
+                <div
+                  style="font-size:0.78rem; font-weight:800; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;">
+                  Gross Sales Revenue</div>
+                <div id="pnl-revenue-val"
+                  style="font-size:1.65rem; font-weight:900; color:var(--text-main); margin:4px 0;">₹1,42,850</div>
+                <div id="pnl-revenue-sub" style="font-size:0.75rem; color:#16a34a; font-weight:700;">+2.2% vs Week 3 •
+                  1,280 orders</div>
+              </div>
+              <div
+                style="width:40px; height:40px; border-radius:10px; background:#eef2ff; color:#4f46e5; display:flex; align-items:center; justify-content:center; font-size:1.3rem;">
+                📈
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Total Kitchen Costs -->
+          <div class="manager-card pnl-metric-card" style="border-top:4px solid #f59e0b; padding:16px;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+              <div>
+                <div
+                  style="font-size:0.78rem; font-weight:800; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;">
+                  Total Kitchen Costs (COGS)</div>
+                <div id="pnl-cost-val" style="font-size:1.65rem; font-weight:900; color:#b45309; margin:4px 0;">₹94,200
+                </div>
+                <div id="pnl-cost-sub" style="font-size:0.75rem; color:var(--text-muted);">Ingredients: ₹75.8k •
+                  Utilities: ₹18.4k</div>
+              </div>
+              <div
+                style="width:40px; height:40px; border-radius:10px; background:#fef3c7; color:#b45309; display:flex; align-items:center; justify-content:center; font-size:1.3rem;">
+                🧾
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Net Profit -->
+          <div class="manager-card pnl-metric-card" style="border-top:4px solid #10b981; padding:16px;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+              <div>
+                <div
+                  style="font-size:0.78rem; font-weight:800; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;">
+                  Net Profit</div>
+                <div id="pnl-profit-val" style="font-size:1.65rem; font-weight:900; color:#059669; margin:4px 0;">
+                  +₹48,650</div>
+                <div id="pnl-profit-sub" style="font-size:0.75rem; color:#059669; font-weight:800;">34.1% Net Margin •
+                  Highly Profitable</div>
+              </div>
+              <div
+                style="width:40px; height:40px; border-radius:10px; background:#ecfdf5; color:#059669; display:flex; align-items:center; justify-content:center; font-size:1.3rem;">
+                💰
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: AI Food Waste Saved -->
+          <div class="manager-card pnl-metric-card" style="border-top:4px solid #06b6d4; padding:16px;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+              <div>
+                <div
+                  style="font-size:0.78rem; font-weight:800; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;">
+                  AI Food Waste Savings</div>
+                <div id="pnl-waste-val" style="font-size:1.65rem; font-weight:900; color:#0891b2; margin:4px 0;">₹18,200
+                </div>
+                <div id="pnl-waste-sub" style="font-size:0.75rem; color:#0891b2; font-weight:700;">Prevented
+                  over-cooking via AI Demand Model</div>
+              </div>
+              <div
+                style="width:40px; height:40px; border-radius:10px; background:#cffafe; color:#0891b2; display:flex; align-items:center; justify-content:center; font-size:1.3rem;">
+                🌿
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Week-over-Week Comparison Section -->
+        <div class="manager-card" style="margin-bottom:16px;">
+          <div
+            style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+            <div>
+              <h3 style="font-size:1.15rem; font-weight:800; color:var(--text-main); margin:0;">📊 Weekly Financial
+                Comparison (Revenue vs Costs vs Net Profit)</h3>
+              <p style="font-size:0.8rem; color:var(--text-muted); margin:2px 0 0 0;">Visual comparison across every
+                week in September 2026.</p>
+            </div>
+            <div style="display:flex; align-items:center; gap:12px; font-size:0.78rem; font-weight:700;">
+              <span style="display:flex; align-items:center; gap:4px;"><span
+                  style="width:12px; height:12px; border-radius:3px; background:#4f46e5; display:inline-block;"></span>
+                Revenue</span>
+              <span style="display:flex; align-items:center; gap:4px;"><span
+                  style="width:12px; height:12px; border-radius:3px; background:#f59e0b; display:inline-block;"></span>
+                Costs</span>
+              <span style="display:flex; align-items:center; gap:4px;"><span
+                  style="width:12px; height:12px; border-radius:3px; background:#10b981; display:inline-block;"></span>
+                Net Profit</span>
+            </div>
+          </div>
+
+          <!-- Dynamic Bar Chart Comparison Grid -->
+          <div id="pnl-weekly-bars-container"
+            style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px;">
+            <!-- Populated dynamically by app.js -->
+          </div>
+        </div>
+
+        <!-- Full Week-over-Week Financial Ledger Table -->
+        <div class="manager-card" style="margin-bottom:16px;">
+          <div style="margin-bottom:12px;">
+            <h3 style="font-size:1.15rem; font-weight:800; color:var(--text-main); margin:0;">📑 Week-over-Week (WoW)
+              P&amp;L Financial Ledger</h3>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin:2px 0 0 0;">Compare revenue, expenses, profit,
+              and margins across every week.</p>
+          </div>
+
+          <div style="overflow-x:auto;">
+            <table class="pnl-table" style="width:100%; border-collapse:collapse; font-size:0.86rem; text-align:left;">
+              <thead>
+                <tr style="background:#f8fafc; border-bottom:2px solid var(--border);">
+                  <th style="padding:10px 12px; font-weight:800;">Week Period</th>
+                  <th style="padding:10px 12px; font-weight:800;">Orders</th>
+                  <th style="padding:10px 12px; font-weight:800;">Gross Revenue</th>
+                  <th style="padding:10px 12px; font-weight:800;">Ingredient Cost</th>
+                  <th style="padding:10px 12px; font-weight:800;">Utilities / Overhead</th>
+                  <th style="padding:10px 12px; font-weight:800;">Total Costs</th>
+                  <th style="padding:10px 12px; font-weight:800;">Net Profit</th>
+                  <th style="padding:10px 12px; font-weight:800;">Margin %</th>
+                  <th style="padding:10px 12px; font-weight:800;">Waste Saved</th>
+                  <th style="padding:10px 12px; font-weight:800;">Status</th>
+                </tr>
+              </thead>
+              <tbody id="pnl-table-body">
+                <!-- Populated dynamically by app.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Top Profitable Dishes & Margin Breakdown Card -->
+        <div class="manager-card">
+          <div style="margin-bottom:12px;">
+            <h3 style="font-size:1.15rem; font-weight:800; color:var(--text-main); margin:0;">🍛 Dish-Level Margin &amp;
+              Profitability Breakdown</h3>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin:2px 0 0 0;">Highest earning items, unit
+              preparation costs, and contribution margins.</p>
+          </div>
+
+          <div style="overflow-x:auto;">
+            <table class="pnl-table" style="width:100%; border-collapse:collapse; font-size:0.86rem; text-align:left;">
+              <thead>
+                <tr style="background:#f8fafc; border-bottom:2px solid var(--border);">
+                  <th style="padding:10px 12px; font-weight:800;">Dish Name</th>
+                  <th style="padding:10px 12px; font-weight:800;">Portions Sold</th>
+                  <th style="padding:10px 12px; font-weight:800;">Total Sales</th>
+                  <th style="padding:10px 12px; font-weight:800;">Ingredient Cost</th>
+                  <th style="padding:10px 12px; font-weight:800;">Net Profit</th>
+                  <th style="padding:10px 12px; font-weight:800;">Profit Margin</th>
+                  <th style="padding:10px 12px; font-weight:800;">Status</th>
+                </tr>
+              </thead>
+              <tbody id="pnl-dishes-table-body">
+                <!-- Populated dynamically by app.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </main>
+
+
+
+  <!-- =========================================================================
+
+       SIMPLE MODALS (CART, TOKEN SUCCESS, AUTH)
+
+       ========================================================================= -->
+
+  <!-- Add Website Review Modal (Rate 4 or 5 stars) -->
+  <div id="add-review-modal" class="modal-overlay">
+    <div class="modal-box" style="max-width:440px; padding:24px 20px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="font-size:1.6rem;">⭐</span>
+          <div>
+            <h2 style="font-size:1.25rem; font-weight:800; color:var(--text-main); margin:0;">Rate Savitha Canteen</h2>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin:0;">Share your dining experience</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeAddReviewModal()"
+          style="background:transparent; border:none; font-size:1.35rem; cursor:pointer; color:var(--text-muted); line-height:1;"
+          aria-label="Close modal">✕</button>
+      </div>
+
+      <form id="add-review-form" onsubmit="handleWebsiteReviewSubmit(event)">
+        <!-- Clean Star Rating (1 to 5 Stars as User Wishes) -->
+        <div
+          style="text-align:center; padding:16px 12px; background:#f8fafc; border-radius:14px; margin-bottom:16px; border:1px solid var(--border);">
+          <div class="swiggy-stars-row" id="swiggy-star-row"
+            style="font-size:2.6rem; letter-spacing:6px; cursor:pointer; user-select:none; margin-bottom:6px;">
+            <span class="swiggy-star active" data-val="1" onclick="setSwiggyRating(1)"
+              onmouseover="hoverSwiggyRating(1)" onmouseleave="resetSwiggyRatingHover()">★</span>
+            <span class="swiggy-star active" data-val="2" onclick="setSwiggyRating(2)"
+              onmouseover="hoverSwiggyRating(2)" onmouseleave="resetSwiggyRatingHover()">★</span>
+            <span class="swiggy-star active" data-val="3" onclick="setSwiggyRating(3)"
+              onmouseover="hoverSwiggyRating(3)" onmouseleave="resetSwiggyRatingHover()">★</span>
+            <span class="swiggy-star active" data-val="4" onclick="setSwiggyRating(4)"
+              onmouseover="hoverSwiggyRating(4)" onmouseleave="resetSwiggyRatingHover()">★</span>
+            <span class="swiggy-star active" data-val="5" onclick="setSwiggyRating(5)"
+              onmouseover="hoverSwiggyRating(5)" onmouseleave="resetSwiggyRatingHover()">★</span>
+          </div>
+          <div id="swiggy-rating-verbal" style="font-size:0.95rem; font-weight:800; color:#10b981;">5 Stars</div>
+          <input type="hidden" id="modal-fb-rating" value="5">
+          <input type="hidden" id="modal-fb-category" value="Food & Service">
+        </div>
+
+        <!-- Clean, Simple Name & Semester Inputs -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px;">
+          <div>
+            <label class="fb-field-label" for="modal-fb-name">Your Full Name</label>
+            <input type="text" id="modal-fb-name" class="input-field" placeholder="e.g. Rahul Sharma" required
+              style="width:100%;">
+          </div>
+          <div>
+            <label class="fb-field-label" for="modal-fb-year">Semester &amp; Branch</label>
+            <input type="text" id="modal-fb-year" class="input-field" placeholder="e.g. Sem 6 CSE / Sem 4 ECE" required
+              style="width:100%;">
+          </div>
+        </div>
+
+        <!-- Clean Review Comments Area -->
+        <div style="margin-bottom:16px;">
+          <label class="fb-field-label" for="modal-fb-comment">Write your review</label>
+          <textarea id="modal-fb-comment" class="input-field" rows="3"
+            placeholder="Share your experience dining at Savitha Canteen..." required
+            style="width:100%; resize:vertical;"></textarea>
+        </div>
+
+        <button type="submit" class="btn-calc" id="btn-submit-website-review"
+          style="width:100%; padding:13px; font-size:1rem; font-weight:800; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:#ffffff; border:none; border-radius:12px; cursor:pointer; box-shadow:0 4px 12px rgba(16, 185, 129, 0.25);">
+          Submit Review
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- My Orders Modal (View all placed orders & tokens) -->
+
+  <div id="my-orders-modal" class="modal-overlay">
+
+    <div class="modal-box" style="max-width:520px;">
+
+      <div
+        style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; border-bottom:1px solid var(--border); padding-bottom:10px;">
+
+        <div style="display:flex; align-items:center; gap:8px;">
+
+          <span style="font-size:1.4rem;">📦</span>
+
+          <div>
+
+            <h2 style="font-size:1.25rem; font-weight:800; color:var(--text-main); margin:0;">My Orders</h2>
+
+            <p style="font-size:0.8rem; color:var(--text-muted); margin:0;">Active pickup tokens &amp; placed meals</p>
+
+          </div>
+
+        </div>
+
+        <button type="button" onclick="closeMyOrdersModal()"
+          style="background:transparent; border:none; font-size:1.35rem; cursor:pointer; color:var(--text-muted); line-height:1;"
+          aria-label="Close modal">✕</button>
+
+      </div>
+
+
+
+      <div id="my-orders-list-container" style="max-height:360px; overflow-y:auto; padding-right:2px;">
+
+        <!-- Populated dynamically by app.js -->
+
+      </div>
+
+
+
+      <div style="margin-top:14px; display:flex; justify-content:space-between; gap:10px;">
+
+        <button type="button" class="btn-calc" onclick="closeMyOrdersModal(); navigateToSection('order');"
+          style="width:100%; padding:10px; font-size:0.9rem; justify-content:center;">
+
+          <span>🍽️</span> Order More Dishes
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Simple Cart Modal -->
+
+  <!-- Last-Minute Order Cancellation Confirmation Modal -->
+  <!-- User Profile & Account Modal -->
+  <div id="profile-modal" class="modal-overlay">
+    <div class="modal-box" style="max-width:440px;">
+      <div
+        style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; border-bottom:1px solid var(--border); padding-bottom:10px;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="font-size:1.35rem;">👤</span>
+          <div>
+            <h2 style="font-size:1.25rem; font-weight:800; color:var(--text-main); margin:0;">User Profile</h2>
+            <p style="font-size:0.78rem; color:var(--text-muted); margin:0;">Your private account &amp; dining records
+            </p>
+          </div>
+        </div>
+        <button type="button" onclick="closeProfileModal()"
+          style="background:transparent; border:none; font-size:1.35rem; cursor:pointer; color:var(--text-muted); line-height:1;"
+          aria-label="Close profile">✕</button>
+      </div>
+
+      <div id="profile-modal-body">
+        <!-- Dynamically rendered by app.js -->
+      </div>
+    </div>
+  </div>
+
+
+  <div id="cancel-order-modal" class="modal-overlay">
+    <div class="modal-box" style="max-width:440px;">
+      <div
+        style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; border-bottom:1px solid var(--border); padding-bottom:10px;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="font-size:1.3rem;">⚠️</span>
+          <h2 style="font-size:1.2rem; font-weight:800; color:var(--text-main); margin:0;">Cancel Order Confirmation
+          </h2>
+        </div>
+        <button type="button" onclick="closeCancelOrderModal()"
+          style="background:transparent; border:none; font-size:1.3rem; cursor:pointer; color:var(--text-muted); line-height:1;"
+          aria-label="Close modal">✕</button>
+      </div>
+
+      <div id="cancel-modal-content">
+        <!-- Dynamically rendered with exact fee, elapsed time, and refund breakdown -->
+      </div>
+    </div>
+  </div>
+
+
+  <div id="cart-modal" class="modal-overlay">
+
+    <div class="modal-box" style="max-width:480px;">
+
+      <div
+        style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; border-bottom:1px solid var(--border); padding-bottom:10px;">
+
+        <h2 style="font-size:1.3rem; font-weight:800; color:var(--text-main); margin:0;">Your Food Cart</h2>
+
+        <button type="button" onclick="closeCartModal()"
+          style="background:transparent; border:none; font-size:1.4rem; cursor:pointer; color:var(--text-muted); line-height:1;"
+          aria-label="Close cart">✕</button>
+
+      </div>
+
+
+
+      <div id="cart-items-container" class="cart-items-list"
+        style="max-height:240px; overflow-y:auto; margin-bottom:14px;">
+
+        <!-- Populated dynamically by app.js -->
+
+      </div>
+
+
+
+      <!-- Coupon / Promo Code Application in Cart Modal -->
+      <div class="cart-coupon-box"
+        style="background:#f8fafc; border:1.5px solid var(--border); border-radius:12px; padding:12px; margin-bottom:12px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+          <span
+            style="font-size:0.82rem; font-weight:800; color:var(--text-main); display:flex; align-items:center; gap:6px;">
+            <span>🎟️</span> Apply Promo / Coupon Code
+          </span>
+          <span id="cart-active-coupon-badge"
+            style="display:none; font-size:0.75rem; background:#ecfdf5; color:#059669; font-weight:800; padding:2px 8px; border-radius:999px;">
+            ✓ Active
+          </span>
+        </div>
+        <div style="display:flex; gap:8px;">
+          <input type="text" id="cart-coupon-input" class="input-field"
+            placeholder="Enter coupon (e.g. FREE10, SAVITHA30)"
+            style="flex:1; text-transform:uppercase; font-weight:800; font-size:0.86rem; padding:8px 10px;"
+            onkeydown="if(event.key==='Enter'){applyCartCoupon(); return false;}">
+          <button type="button" class="btn-calc" onclick="applyCartCoupon()"
+            style="padding:8px 16px; font-size:0.86rem; background:var(--primary);">
+            Apply
+          </button>
+        </div>
+        <div id="cart-coupon-msg" style="display:none; font-size:0.8rem; margin-top:6px; font-weight:700;"></div>
+        <div style="display:flex; gap:6px; margin-top:8px; flex-wrap:wrap;">
+          <button type="button" class="mini-coupon-chip" onclick="applyQuickCoupon('FREE10')">🎁 FREE10 (Free
+            Drink/Snack)</button>
+          <button type="button" class="mini-coupon-chip" onclick="applyQuickCoupon('SAVITHA30')">🏷️ SAVITHA30 (₹30
+            OFF)</button>
+          <button type="button" class="mini-coupon-chip" onclick="applyQuickCoupon('SPECIAL99')">⚡ SPECIAL99 (₹99
+            Special Deal)</button>
+        </div>
+      </div>
+
+      <!-- Bill Breakdown with Subtotal, Discount & Final Payable -->
+      <div style="padding:8px 0; border-top:1px dashed var(--border); margin-bottom:12px;">
+        <div
+          style="display:flex; justify-content:space-between; font-size:0.88rem; color:var(--text-muted); margin-bottom:4px;">
+          <span>Items Total</span>
+          <span id="cart-subtotal-val">₹0</span>
+        </div>
+        <div id="cart-discount-row"
+          style="display:none; justify-content:space-between; font-size:0.88rem; color:#10b981; font-weight:700; margin-bottom:4px;">
+          <span id="cart-discount-label">Coupon Discount</span>
+          <span id="cart-discount-val">-₹0</span>
+        </div>
+        <div
+          style="display:flex; justify-content:space-between; align-items:center; font-size:1.15rem; font-weight:900; color:var(--text-main); padding-top:6px; border-top:1px solid var(--border);">
+          <span>Total Amount to Pay</span>
+          <span id="cart-modal-total" style="font-size:1.35rem; font-weight:900; color:var(--primary);">₹0</span>
+        </div>
+      </div>
+
+
+
+      <!-- Quick Student Info for Token -->
+
+      <div
+        style="background:#f8fafc; border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:14px;">
+
+        <label style="font-size:0.8rem; font-weight:700; color:var(--text-main); display:block; margin-bottom:4px;">Your
+          Name (for token &amp; pickup):</label>
+
+        <input type="text" id="order-customer-name" class="input-field" placeholder="Enter your name" value=""
+          style="width:100%; font-size:0.9rem; margin-bottom:8px;" required>
+
+
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+
+          <div>
+
+            <label
+              style="font-size:0.78rem; font-weight:700; color:var(--text-main); display:block; margin-bottom:2px;">Year:</label>
+
+            <select id="order-customer-year" class="input-field"
+              style="width:100%; font-size:0.85rem; padding:6px 8px;">
+
+              <option value="1st Year" selected>1st Year</option>
+
+              <option value="2nd Year">2nd Year</option>
+
+              <option value="3rd Year">3rd Year</option>
+
+              <option value="4th Year (Final Year)">4th Year</option>
+
+              <option value="Faculty / Staff">Faculty / Staff</option>
+
+            </select>
+
+          </div>
+
+          <div>
+
+            <label
+              style="font-size:0.78rem; font-weight:700; color:var(--text-main); display:block; margin-bottom:2px;">Phone:</label>
+
+            <input type="tel" id="order-customer-phone" class="input-field" placeholder="Mobile number (optional)"
+              maxlength="10" style="width:100%; font-size:0.85rem; padding:6px 8px;" value="">
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <button type="button" class="btn-calc" onclick="placeOrderAndGenerateToken()"
+        style="width:100%; padding:13px; font-size:1rem;">
+
+        <span>⚡</span> Order Now &amp; Get Token
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Order Token Success Modal -->
+
+  <div id="token-modal" class="modal-overlay">
+
+    <div class="modal-box" style="text-align:center; max-width:420px;">
+
+      <div style="font-size:2.8rem; margin-bottom:6px;">🎉</div>
+
+      <div
+        style="display:inline-block; background:#dcfce7; color:#15803d; font-size:0.8rem; font-weight:800; padding:4px 12px; border-radius:999px; margin-bottom:10px;">
+
+        ✓ ORDER RECEIVED BY KITCHEN
+
+      </div>
+
+      <h2 style="font-size:1.45rem; font-weight:900; color:var(--text-main); margin-bottom:4px;">You Got the Order!</h2>
+
+      <p id="token-order-message" style="font-size:0.9rem; color:var(--text-muted); margin-bottom:14px;">
+
+        The kitchen is preparing your meal hot and fresh.
+
+      </p>
+
+
+
+      <!-- Token Box -->
+      <div style="background:#f5f3ff; border:2px dashed #c4b5fd; border-radius:14px; padding:16px; margin-bottom:12px;">
+        <div style="font-size:0.75rem; font-weight:800; color:#4f46e5; text-transform:uppercase;">Pickup Token Number
+        </div>
+        <div id="token-number" style="font-size:2.8rem; font-weight:900; color:#4f46e5; line-height:1.1; margin:4px 0;">
+          #A-42</div>
+        <div style="font-size:0.82rem; color:#4f46e5; font-weight:700;">Show this token at the counter for pickup</div>
+      </div>
+
+      <!-- Prominent Food Arrival Card -->
+      <div class="token-arrival-banner"
+        style="background:linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border:2px solid #6ee7b7; border-radius:14px; padding:12px 14px; margin-bottom:14px; text-align:center;">
+        <div
+          style="font-size:0.75rem; font-weight:800; color:#065f46; text-transform:uppercase; letter-spacing:0.5px; display:flex; align-items:center; justify-content:center; gap:6px;">
+          <span>🚀</span> ESTIMATED FOOD ARRIVAL AT COUNTER
+        </div>
+        <div id="token-arrival-time" style="font-size:1.75rem; font-weight:900; color:#047857; margin:3px 0;">
+          --:-- PM
+        </div>
+        <div id="token-arrival-countdown" style="font-size:0.82rem; color:#065f46; font-weight:700;">
+          ⏱️ Food arrives hot &amp; fresh in ~10 mins
+        </div>
+      </div>
+
+
+
+      <!-- Items Ordered Summary -->
+
+      <div id="token-items-box"
+        style="background:#f8fafc; border:1px solid var(--border); border-radius:10px; padding:10px 14px; text-align:left; margin-bottom:14px;">
+
+        <div
+          style="font-size:0.75rem; font-weight:700; color:var(--text-muted); margin-bottom:4px; text-transform:uppercase;">
+          Order Summary</div>
+
+        <div id="token-items-list" style="font-size:0.85rem; color:var(--text-main); font-weight:600;">
+
+          <!-- Dynamically populated -->
+
+        </div>
+
+        <div
+          style="border-top:1px dashed var(--border); margin-top:6px; padding-top:4px; display:flex; justify-content:space-between; font-weight:800;">
+
+          <span>Total Paid</span>
+
+          <span id="token-total-paid" style="color:var(--primary); font-size:1rem;">₹0</span>
+
+        </div>
+
+      </div>
+
+
+
+      <div style="display:flex; gap:8px; margin-bottom:8px;">
+
+        <button type="button" class="btn-calc" onclick="closeTokenModal(); openMyOrdersModal();"
+          style="flex:1; padding:10px; background:#4f46e5;">
+
+          <span>📦</span> View in My Orders
+
+        </button>
+
+        <button type="button" class="btn-calc" onclick="closeTokenModal()" style="flex:1; padding:10px;">
+
+          <span>🍽️</span> Menu
+
+        </button>
+
+      </div>
+
+      <div>
+
+        <button type="button" class="btn-cancel-modal" id="btn-cancel-token-order" onclick="cancelCurrentTokenOrder()"
+          style="width:100%; padding:8px; font-size:0.85rem;">
+
+          <span>❌</span> Cancel This Order
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Role Switch / Quick Login Modal -->
+
+  <div id="auth-modal" class="modal-overlay">
+
+    <div class="modal-box" style="text-align:center; max-width:400px;">
+
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+
+        <h2 style="font-size:1.25rem; font-weight:800; color:var(--text-main); margin:0;">Login / Switch Role</h2>
+
+        <button type="button" onclick="closeAuthModal()"
+          style="background:transparent; border:none; font-size:1.3rem; cursor:pointer; color:var(--text-muted); line-height:1;"
+          aria-label="Close modal">✕</button>
+
+      </div>
+
+
+
+      <div class="role-logo-selector role-logo-modal" role="tablist" aria-label="Select Role">
+
+        <button type="button" class="role-logo-card active" id="tab-btn-student" onclick="showAuthTab('student')">
+
+          <div class="role-logo-circle role-logo-student" style="width:44px; height:44px; font-size:1.5rem;">
+
+            <span class="role-logo-icon">🎓</span>
+
+          </div>
+
+          <div class="role-logo-info">
+
+            <span class="role-logo-label" style="font-size:0.92rem;">Student</span>
+
+            <span class="role-logo-sub" style="font-size:0.7rem;">Order Food</span>
+
+          </div>
+
+          <span class="role-logo-check">✓</span>
+
+        </button>
+
+        <button type="button" class="role-logo-card" id="tab-btn-worker" onclick="showAuthTab('worker')">
+
+          <div class="role-logo-circle role-logo-worker" style="width:44px; height:44px; font-size:1.5rem;">
+
+            <span class="role-logo-icon">👨‍🍳</span>
+
+          </div>
+
+          <div class="role-logo-info">
+
+            <span class="role-logo-label" style="font-size:0.92rem;">Kitchen Staff</span>
+
+            <span class="role-logo-sub" style="font-size:0.7rem;">Live Orders</span>
+
+          </div>
+
+          <span class="role-logo-check">✓</span>
+
+        </button>
+
+      </div>
+
+
+
+      <div id="auth-tab-student">
+        <form id="modal-student-form" onsubmit="handleStudentFormSubmit(event)">
+          <div style="margin-bottom:12px; text-align:left;">
+            <label
+              style="font-size:0.82rem; font-weight:700; color:var(--text-main); display:block; margin-bottom:4px;">Your
+              Full Name</label>
+            <input type="text" id="modal-student-name" class="input-field" placeholder="Enter your full name"
+              style="width:100%; font-size:0.92rem;" required>
+          </div>
+          <div style="margin-bottom:14px; text-align:left;">
+            <label
+              style="font-size:0.82rem; font-weight:700; color:var(--text-main); display:block; margin-bottom:4px;">Mobile
+              Phone Number</label>
+            <input type="tel" id="modal-student-phone" class="input-field" placeholder="10-digit mobile number"
+              maxlength="10" style="width:100%; font-size:0.92rem;" required>
+          </div>
+          <button type="submit" class="btn-calc" style="width:100%; padding:11px; font-size:0.95rem;">
+            <span>🚀</span> Enter Food Menu
+          </button>
+        </form>
+      </div>
+
+
+
+      <div id="auth-tab-worker" style="display:none;">
+
+        <form id="modal-worker-form" onsubmit="handleWorkerLogin(event)">
+
+          <div style="margin-bottom:12px; text-align:left;">
+
+            <label
+              style="font-size:0.8rem; font-weight:700; color:var(--text-main); display:block; margin-bottom:4px;">Staff
+              Password</label>
+
+            <input type="password" id="worker-password-input" class="input-field" placeholder="Enter password"
+              style="width:100%; font-size:0.92rem;" required autocomplete="current-password">
+
+          </div>
+
+          <button type="submit" class="btn-calc"
+            style="background:#2563eb; width:100%; padding:11px; font-size:0.95rem;">
+
+            <span>⚡</span> Login as Staff
+
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Floating Order Now Bar -->
+
+  <div id="cart-floating-bar" class="cart-floating-bar" onclick="openCartModal()">
+
+    <div style="display:flex; flex-direction:column; gap:2px;">
+
+      <span class="cart-bar-total" id="floating-cart-total">₹0</span>
+
+      <span class="cart-bar-items" id="floating-cart-count">0 items selected</span>
+
+    </div>
+
+    <button type="button" class="btn-checkout" onclick="openCartModal(); event.stopPropagation();">
+
+      <span>⚡</span> Order Now →
+
+    </button>
+
+  </div>
+
+
+
+  <!-- Toast Notification Container -->
+
+  <div id="toast-container" class="toast-wrap"></div>
+
+
+
+  <!-- Official University Campus Dining Footer -->
+  <footer
+    style="background:#0f172a; color:#cbd5e1; padding:28px 0; border-top:1px solid rgba(255,255,255,0.08); margin-top:40px;">
+    <div class="container"
+      style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <img src="assets/logo.png" alt="Savitha Canteen Logo" style="width:36px; height:36px; border-radius:10px;">
+        <div>
+          <div style="font-size:1.05rem; font-weight:900; color:#ffffff;">Savitha <span
+              style="color:#f59e0b;">Canteen</span></div>
+          <div style="font-size:0.75rem; color:#94a3b8;">Savitha University • Official Campus Dining Portal</div>
+        </div>
+      </div>
+      <div style="font-size:0.85rem; color:#94a3b8;">
+        Designed &amp; Developed by <a
+          href="https://www.linkedin.com/in/pari-parinitha-s-6196b8354?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android"
+          target="_blank" rel="noopener noreferrer"
+          style="color:#f59e0b; font-weight:800; text-decoration:none;">Parinitha.S</a> (Lead Developer)
+      </div>
+      <div style="font-size:0.8rem; color:#64748b;">
+        © 2026 Savitha Canteen Services. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Scripts -->
+
+  <script src="js/model_engine.js"></script>
+
+  <script src="js/charts.js"></script>
+
+  <script src="js/app.js"></script>
+
+
+  <!-- =========================================================================
+       MODERN MOBILE BOTTOM NAVIGATION BAR (Smartphones & Tablets <= 768px)
+       ========================================================================= -->
+  <nav class="mobile-bottom-nav" id="mobile-bottom-nav" aria-label="Mobile Navigation">
+    <button type="button" class="mobile-nav-item active" id="mob-nav-about" onclick="navigateToSection('about')">
+      <span class="mob-nav-icon">🏛️</span>
+      <span class="mob-nav-label">About</span>
+    </button>
+    <button type="button" class="mobile-nav-item" id="mob-nav-menu" onclick="handleMenuAccessRequest()">
+      <span class="mob-nav-icon">🍽️</span>
+      <span class="mob-nav-label">Food Menu</span>
+    </button>
+    <button type="button" class="mobile-nav-item" id="mob-nav-orders" onclick="openMyOrdersModal()">
+      <span class="mob-nav-icon">📦</span>
+      <span class="mob-nav-label">Orders</span>
+      <span class="mob-nav-badge" id="mob-orders-badge" style="display:none;">0</span>
+    </button>
+    <button type="button" class="mobile-nav-item" id="mob-nav-cart" onclick="openCartModal()">
+      <span class="mob-nav-icon">🛒</span>
+      <span class="mob-nav-label">Cart</span>
+      <span class="mob-nav-badge" id="mob-cart-badge" style="display:none;">0</span>
+    </button>
+    <button type="button" class="mobile-nav-item" id="mob-nav-share" onclick="openNetworkShareModal()">
+      <span class="mob-nav-icon">📱</span>
+      <span class="mob-nav-label">Phone View</span>
+    </button>
+  </nav>
+
+  <!-- =========================================================================
+       NETWORK SHARE / OPEN ON PHONE MODAL (WITH LIVE QR CODE & IP LINK)
+       ========================================================================= -->
+  <div id="network-share-modal" class="custom-modal" role="dialog" aria-modal="true"
+    aria-labelledby="share-modal-title">
+    <div class="custom-modal-backdrop" onclick="closeNetworkShareModal()"></div>
+    <div class="modal-box network-share-box" style="max-width:440px; text-align:center; padding:24px 20px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="font-size:1.4rem;">📱</span>
+          <h3 id="share-modal-title" style="font-size:1.15rem; font-weight:800; color:var(--text-main); margin:0;">Open
+            on Other Phones &amp; Laptops</h3>
+        </div>
+        <button type="button" class="modal-close-btn" onclick="closeNetworkShareModal()"
+          aria-label="Close modal">×</button>
+      </div>
+
+      <p style="font-size:0.86rem; color:var(--text-muted); margin:0 0 16px 0; line-height:1.4;">
+        Connect your phone or other device to the same Wi-Fi network and scan the QR code or open this URL:
+      </p>
+
+      <!-- QR Code Display Area -->
+      <div
+        style="background:#ffffff; padding:16px; border-radius:14px; border:2px solid #e2e8f0; display:inline-block; margin-bottom:14px; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
+        <img id="network-qr-image"
+          src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;data=http://10.209.246.16:5000"
+          alt="QR code to open Savitha Canteen on phone"
+          style="width:180px; height:180px; display:block; border-radius:8px;"
+          onerror="this.onerror=null; this.src='https://chart.googleapis.com/chart?cht=qr&amp;chs=200x200&amp;chl=http://10.209.246.16:5000';">
+        <div style="font-size:0.75rem; font-weight:700; color:#64748b; margin-top:8px;">📷 Scan with Phone Camera</div>
+      </div>
+
+      <!-- LAN URL Box with 1-Click Copy -->
+      <div
+        style="background:#f1f5f9; border:1.5px solid #cbd5e1; border-radius:10px; padding:10px 12px; display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:14px;">
+        <span id="network-share-url-text"
+          style="font-size:0.92rem; font-weight:800; color:var(--primary); font-family:monospace; word-break:break-all;">http://10.209.246.16:5000</span>
+        <button type="button" class="btn-copy-link" onclick="copyNetworkShareLink()"
+          style="padding:6px 12px; font-size:0.8rem; font-weight:700; background:var(--primary); color:#ffffff; border:none; border-radius:6px; cursor:pointer; white-space:nowrap;">
+          📋 Copy
+        </button>
+      </div>
+
+      <div
+        style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:10px; padding:10px 12px; text-align:left; font-size:0.8rem; color:#1e40af; line-height:1.4;">
+        💡 <strong>Quick Tip:</strong> Both devices must be on the same Wi-Fi hotspot or campus network. Any phone
+        (Android or iPhone) can place orders hot and fresh!
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

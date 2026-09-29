@@ -1,0 +1,331 @@
+{
+  "evaluation_date": "2026-09-21 18:40:18",
+  "total_records": 720,
+  "train_records": 576,
+  "test_records": 144,
+  "baseline_model": {
+    "model_name": "Linear Regression (Baseline)",
+    "train_mae": 16.69,
+    "test_mae": 17.38,
+    "train_rmse": 22.94,
+    "test_rmse": 22.21,
+    "train_r2": 0.8555,
+    "test_r2": 0.8403
+  },
+  "best_model": {
+    "model_name": "Random Forest Regressor (Improved)",
+    "train_mae": 6.95,
+    "test_mae": 12.68,
+    "train_rmse": 9.72,
+    "test_rmse": 16.77,
+    "train_r2": 0.9741,
+    "test_r2": 0.909
+  },
+  "feature_importances": [
+    {
+      "feature": "previous_week_sales",
+      "importance": 0.4271
+    },
+    {
+      "feature": "is_holiday",
+      "importance": 0.3335
+    },
+    {
+      "feature": "special_event_nan",
+      "importance": 0.0437
+    },
+    {
+      "feature": "food_item_Samosa & Chai",
+      "importance": 0.0387
+    },
+    {
+      "feature": "previous_day_sales",
+      "importance": 0.0344
+    },
+    {
+      "feature": "special_event_College Fest",
+      "importance": 0.0212
+    },
+    {
+      "feature": "day_of_week_Friday",
+      "importance": 0.021
+    },
+    {
+      "feature": "special_event_Sports Meet",
+      "importance": 0.0209
+    },
+    {
+      "feature": "special_event_Exam Period",
+      "importance": 0.008
+    },
+    {
+      "feature": "food_item_Chicken Biryani",
+      "importance": 0.0075
+    },
+    {
+      "feature": "weather_Rainy",
+      "importance": 0.0056
+    },
+    {
+      "feature": "food_item_Veg Biryani",
+      "importance": 0.0053
+    }
+  ],
+  "item_stats": {
+    "Chicken Biryani": {
+      "avg_demand": 171.7,
+      "min_demand": 78,
+      "max_demand": 312,
+      "std_demand": 54.1
+    },
+    "Chole Bhature": {
+      "avg_demand": 129.7,
+      "min_demand": 71,
+      "max_demand": 218,
+      "std_demand": 30.5
+    },
+    "Fried Rice": {
+      "avg_demand": 105.0,
+      "min_demand": 31,
+      "max_demand": 182,
+      "std_demand": 34.7
+    },
+    "Masala Dosa": {
+      "avg_demand": 119.8,
+      "min_demand": 65,
+      "max_demand": 202,
+      "std_demand": 29.4
+    },
+    "Paneer Thali": {
+      "avg_demand": 95.6,
+      "min_demand": 28,
+      "max_demand": 173,
+      "std_demand": 36.8
+    },
+    "Samosa & Chai": {
+      "avg_demand": 213.6,
+      "min_demand": 77,
+      "max_demand": 369,
+      "std_demand": 81.5
+    },
+    "Sandwich": {
+      "avg_demand": 90.6,
+      "min_demand": 37,
+      "max_demand": 145,
+      "std_demand": 26.2
+    },
+    "Veg Biryani": {
+      "avg_demand": 131.2,
+      "min_demand": 56,
+      "max_demand": 231,
+      "std_demand": 42.7
+    }
+  },
+  "sample_evaluation": [
+    {
+      "date": "2026-09-04",
+      "day_of_week": "Friday",
+      "food_item": "Paneer Thali",
+      "weather": "Sunny",
+      "special_event": NaN,
+      "actual": 130,
+      "predicted": 130,
+      "error": 0
+    },
+    {
+      "date": "2026-09-04",
+      "day_of_week": "Friday",
+      "food_item": "Samosa & Chai",
+      "weather": "Sunny",
+      "special_event": NaN,
+      "actual": 283,
+      "predicted": 256,
+      "error": -27
+    },
+    {
+      "date": "2026-09-04",
+      "day_of_week": "Friday",
+      "food_item": "Sandwich",
+      "weather": "Sunny",
+      "special_event": NaN,
+      "actual": 103,
+      "predicted": 118,
+      "error": 15
+    },
+    {
+      "date": "2026-09-04",
+      "day_of_week": "Friday",
+      "food_item": "Veg Biryani",
+      "weather": "Sunny",
+      "special_event": NaN,
+      "actual": 172,
+      "predicted": 165,
+      "error": -7
+    },
+    {
+      "date": "2026-09-05",
+      "day_of_week": "Saturday",
+      "food_item": "Chicken Biryani",
+      "weather": "Sunny",
+      "special_event": NaN,
+      "actual": 113,
+      "predicted": 100,
+      "error": -13
+    },
+    {
+      "date": "2026-09-05",
+      "day_of_week": "Saturday",
+      "food_item": "Chole Bhature",
+      "weather": "Sunny",
+      "special_event": NaN,
+      "actual": 77,
+      "predicted": 53,
+      "error": -24
+    },
+    {
+      "date": "2026-09-05",
+      "day_of_week": "Saturday",
+      "food_item": "Fried Rice",
+      "weather": "Sunny",
+      "special_event": NaN,
+      "actual": 66,
+      "predicted": 59,
+      "error": -7
+    },
+    {
+      "date": "2026-09-05",
+      "day_of_week": "Saturday",
+      "food_item": "Masala Dosa",
+      "weather": "Sunny",
+      "special_event": NaN,
+      "actual": 72,
+      "predicted": 85,
+      "error": 13
+    },
+    {
+      "date": "2026-09-05",
+      "day_of_week": "Saturday",
+      "food_item": "Paneer Thali",
+      "weather": "Sunny",
+      "special_event": NaN,
+      "actual": 63,
+      "predicted": 55,
+      "error": -8
+    },
+    {
+      "date": "2026-09-05",
+      "day_of_week": "Saturday",
+      "food_item": "Samosa & Chai",
+      "weather": "Sunny",
+      "special_event": NaN,
+      "actual": 143,
+      "predicted": 110,
+      "error": -33
+    },
+    {
+      "date": "2026-09-05",
+      "day_of_week": "Saturday",
+      "food_item": "Sandwich",
+      "weather": "Sunny",
+      "special_event": NaN,
+      "actual": 60,
+      "predicted": 59,
+      "error": -1
+    },
+    {
+      "date": "2026-09-05",
+      "day_of_week": "Saturday",
+      "food_item": "Veg Biryani",
+      "weather": "Sunny",
+      "special_event": NaN,
+      "actual": 59,
+      "predicted": 84,
+      "error": 25
+    },
+    {
+      "date": "2026-09-06",
+      "day_of_week": "Sunday",
+      "food_item": "Chicken Biryani",
+      "weather": "Sunny",
+      "special_event": "Sports Meet",
+      "actual": 121,
+      "predicted": 104,
+      "error": -17
+    },
+    {
+      "date": "2026-09-06",
+      "day_of_week": "Sunday",
+      "food_item": "Chole Bhature",
+      "weather": "Sunny",
+      "special_event": "Sports Meet",
+      "actual": 111,
+      "predicted": 76,
+      "error": -35
+    },
+    {
+      "date": "2026-09-06",
+      "day_of_week": "Sunday",
+      "food_item": "Fried Rice",
+      "weather": "Sunny",
+      "special_event": "Sports Meet",
+      "actual": 66,
+      "predicted": 77,
+      "error": 11
+    },
+    {
+      "date": "2026-09-06",
+      "day_of_week": "Sunday",
+      "food_item": "Masala Dosa",
+      "weather": "Sunny",
+      "special_event": "Sports Meet",
+      "actual": 93,
+      "predicted": 84,
+      "error": -9
+    },
+    {
+      "date": "2026-09-06",
+      "day_of_week": "Sunday",
+      "food_item": "Paneer Thali",
+      "weather": "Sunny",
+      "special_event": "Sports Meet",
+      "actual": 61,
+      "predicted": 53,
+      "error": -8
+    },
+    {
+      "date": "2026-09-06",
+      "day_of_week": "Sunday",
+      "food_item": "Samosa & Chai",
+      "weather": "Sunny",
+      "special_event": "Sports Meet",
+      "actual": 126,
+      "predicted": 110,
+      "error": -16
+    },
+    {
+      "date": "2026-09-06",
+      "day_of_week": "Sunday",
+      "food_item": "Sandwich",
+      "weather": "Sunny",
+      "special_event": "Sports Meet",
+      "actual": 66,
+      "predicted": 69,
+      "error": 3
+    },
+    {
+      "date": "2026-09-06",
+      "day_of_week": "Sunday",
+      "food_item": "Veg Biryani",
+      "weather": "Sunny",
+      "special_event": "Sports Meet",
+      "actual": 79,
+      "predicted": 86,
+      "error": 7
+    }
+  ],
+  "viva_explanation": {
+    "why_random_forest": "Random Forest captures complex non-linear interactions between weather conditions, special campus events, and weekly demand cycles without overfitting.",
+    "why_time_aware_split": "Standard random train/test split leaks future seasonal demand into past training data. Chronological splitting guarantees realistic real-world forecasting.",
+    "why_mae_metric": "Mean Absolute Error directly translates to the average number of meal portions over-prepared or under-prepared."
+  }
+}
